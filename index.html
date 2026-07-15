@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>My Recipe Book</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:#F5F2EB;color:#1A2E0D;min-height:100vh}
+input,select,textarea,button{font-family:inherit;font-size:inherit}
+input:focus{outline:2px solid #3B6D11;outline-offset:1px;border-radius:6px}
+::placeholder{color:#B0ADA4}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script>
+const {useState,useEffect,useRef}=React;const E=React.createElement;
+const BG="#F5F2EB",CARD="#FFFFFF",G900="#1A2E0D",G700="#2D5016",G600="#3B6D11",G100="#E4EDCE",G200="#C8DBA0",MUT="#6B7060",MUT2="#A8A89A",BOR="#EBE8DF",BOR2="#D0CCC3",STATS="#F0EDE6",SERIF="'Playfair Display',Georgia,serif";
+
+const SAMPLE=[
+{id:1,name:"Svíčková na smetaně",category:"Czech",description:"Classic Czech beef sirloin braised in cream sauce, served with bread dumplings",baseServings:4,prepTime:30,cookTime:150,tags:["Czech","Beef","Classic"],photo:null,nutrition:null,
+ingredientSections:[{id:1,title:"",ingredients:[{id:1,name:"Beef sirloin",amount:800,unit:"g"},{id:2,name:"Heavy cream",amount:300,unit:"ml"},{id:3,name:"Carrots",amount:200,unit:"g",piece:{label:"medium",grams:80}},{id:4,name:"Celery root",amount:150,unit:"g",piece:{label:"small",grams:300}},{id:5,name:"Onion",amount:100,unit:"g",piece:{label:"medium",grams:110}},{id:6,name:"Butter",amount:60,unit:"g"},{id:7,name:"Beef broth",amount:500,unit:"ml"},{id:8,name:"Vinegar",amount:30,unit:"ml"},{id:9,name:"Sugar",amount:20,unit:"g"},{id:10,name:"Bay leaves",amount:3,unit:"pcs"}]}],
+steps:[{id:1,text:"Lard the beef with thin strips of carrot and celery root. Season generously with salt and pepper. Marinate in the fridge for at least 2 hours, ideally overnight.",timerMinutes:null},{id:2,text:"Sear the beef in butter over high heat on all sides until deeply golden brown. Don't rush this.",timerMinutes:10},{id:3,text:"Add diced onion, carrots, celery root, bay leaves and peppercorns. Pour in the broth.",timerMinutes:null},{id:4,text:"Cover and braise in oven at 160°C, turning occasionally.",timerMinutes:120},{id:5,text:"Remove beef and let it rest. Strain braising liquid, add cream, vinegar and sugar. Simmer to reduce.",timerMinutes:15},{id:6,text:"Blend sauce until smooth. Adjust with salt, sugar and vinegar. Slice beef and serve with sauce and bread dumplings.",timerMinutes:null}]},
+{id:2,name:"Smashed Cucumber Salad",category:"Asian",description:"Refreshing Chinese-style cucumber salad with garlic, sesame and a punchy dressing",baseServings:2,prepTime:15,cookTime:0,tags:["Asian","Salad","Vegetarian","Quick"],photo:null,nutrition:null,
+ingredientSections:[{id:1,title:"",ingredients:[{id:1,name:"Cucumber",amount:400,unit:"g",piece:{label:"medium",grams:300}},{id:2,name:"Garlic cloves",amount:3,unit:"pcs"},{id:3,name:"Soy sauce",amount:30,unit:"ml"},{id:4,name:"Rice vinegar",amount:20,unit:"ml"},{id:5,name:"Sesame oil",amount:15,unit:"ml"},{id:6,name:"Chili flakes",amount:2,unit:"g"},{id:7,name:"Sugar",amount:5,unit:"g"},{id:8,name:"Salt",amount:5,unit:"g"},{id:9,name:"Sesame seeds",amount:10,unit:"g"}]}],
+steps:[{id:1,text:"Smash cucumbers with the flat of a large knife until they crack. Cut into rough 3–4 cm pieces.",timerMinutes:null},{id:2,text:"Toss with salt in a colander. Let sit to draw out excess moisture.",timerMinutes:10},{id:3,text:"Whisk soy sauce, rice vinegar, sesame oil, chili flakes and sugar. Add minced garlic.",timerMinutes:null},{id:4,text:"Pat cucumbers dry. Toss with dressing. Top with sesame seeds. Serve immediately.",timerMinutes:null}]},
+{id:3,name:"Oat Banana Pancakes",category:"Breakfast",description:"Quick healthy pancakes made with oats and banana — no flour needed",baseServings:2,prepTime:10,cookTime:15,tags:["Breakfast","Quick","Healthy"],photo:null,nutrition:null,
+ingredientSections:[{id:1,title:"",ingredients:[{id:1,name:"Ripe banana",amount:2,unit:"pcs"},{id:2,name:"Rolled oats",amount:100,unit:"g"},{id:3,name:"Eggs",amount:2,unit:"pcs"},{id:4,name:"Milk",amount:60,unit:"ml"},{id:5,name:"Baking powder",amount:5,unit:"g"},{id:6,name:"Butter",amount:10,unit:"g"}]}],
+steps:[{id:1,text:"Blend oats into a coarse flour.",timerMinutes:null},{id:2,text:"Mash bananas. Mix in eggs, milk, oat flour, baking powder and a pinch of salt.",timerMinutes:null},{id:3,text:"Heat butter in a pan over medium heat. Pour small rounds of batter. Cook until bubbles form on top.",timerMinutes:3},{id:4,text:"Flip and cook the other side until golden.",timerMinutes:2}]},
+{id:4,name:"Chicken Gnocchi Bake",category:"Healthy",description:"High-protein baked gnocchi with chicken, passata, skyr and melted mozzarella — ready in 35 min",baseServings:1,prepTime:10,cookTime:25,tags:["Healthy","Chicken","Quick","High Protein"],photo:null,nutrition:null,
+ingredientSections:[{id:1,title:"",ingredients:[{id:1,name:"Gnocchi (sweet potato recommended)",amount:150,unit:"g"},{id:2,name:"Chicken breast",amount:150,unit:"g",piece:{label:"breast",grams:150}},{id:3,name:"Passata",amount:100,unit:"ml"},{id:4,name:"Lučina skyr",amount:20,unit:"g"},{id:5,name:"Light mozzarella",amount:30,unit:"g"},{id:6,name:"Sun-dried tomatoes",amount:20,unit:"g"},{id:7,name:"Zucchini",amount:80,unit:"g",piece:{label:"medium",grams:250}},{id:8,name:"Red onion",amount:25,unit:"g",piece:{label:"medium",grams:110}},{id:9,name:"Olive oil",amount:5,unit:"ml"}]}],
+steps:[{id:1,text:"Fry the chicken breast in a pan with olive oil, seasoned with salt and pepper only, until cooked through.",timerMinutes:10},{id:2,text:"In a baking dish, mix together the passata, skyr, sun-dried tomatoes, diced zucchini, sliced red onion and raw gnocchi. Season with dried basil and garlic powder.",timerMinutes:null},{id:3,text:"Slice the cooked chicken and place on top. Crumble or tear the mozzarella evenly over everything.",timerMinutes:null},{id:4,text:"Bake at 180°C until the mozzarella is melted and golden and the gnocchi are soft.",timerMinutes:22}]},
+{id:5,name:"Creamy Chicken Orzo",category:"Healthy",description:"Tender pan-seared chicken on creamy orzo with spinach, peas, skyr and parmesan",baseServings:4,prepTime:15,cookTime:25,tags:["Healthy","Chicken","Creamy","High Protein"],photo:null,nutrition:null,
+ingredientSections:[{id:1,title:"Chicken",ingredients:[{id:1,name:"Chicken breast",amount:600,unit:"g",piece:{label:"breast",grams:150}},{id:2,name:"Lemon slices",amount:2,unit:"pcs"},{id:3,name:"Fresh thyme",amount:3,unit:"g"},{id:4,name:"Olive oil",amount:5,unit:"ml"}]},{id:2,title:"Orzo",ingredients:[{id:5,name:"Butter",amount:20,unit:"g"},{id:6,name:"Onion (medium)",amount:1,unit:"pcs"},{id:7,name:"Garlic cloves",amount:4,unit:"pcs"},{id:8,name:"Orzo",amount:160,unit:"g"},{id:9,name:"Chicken broth",amount:400,unit:"ml"},{id:10,name:"Baby spinach",amount:125,unit:"g",piece:{label:"bag",grams:125}},{id:11,name:"Lučina skyr",amount:120,unit:"g"},{id:12,name:"Parmesan",amount:40,unit:"g"},{id:13,name:"Frozen peas",amount:80,unit:"g"}]}],
+steps:[{id:1,text:"Rub chicken with salt, pepper, paprika, garlic powder and thyme. Let sit for a few minutes.",timerMinutes:null},{id:2,text:"Heat olive oil in a pan. Fry the chicken on both sides with lemon slices and fresh thyme until golden and cooked through. Remove and set aside.",timerMinutes:12},{id:3,text:"In the same pan, melt butter. Add diced onion and cook until translucent.",timerMinutes:5},{id:4,text:"Add minced garlic and cook until fragrant.",timerMinutes:2},{id:5,text:"Add orzo and toast briefly, then pour in the chicken broth. Cook over medium heat until orzo has absorbed the liquid and is tender.",timerMinutes:11},{id:6,text:"Stir in baby spinach, frozen peas, skyr and grated parmesan. Simmer until spinach wilts. Season with salt, pepper and thyme.",timerMinutes:3},{id:7,text:"Slice the chicken and serve on top of the creamy orzo.",timerMinutes:null}]},
+{id:6,name:"Baked Feta Chicken + Couscous Salad",category:"Meal Prep",description:"Juicy oven-baked chicken with cherry tomatoes and feta over fresh couscous salad — 4 boxes, ~590 kcal & ~50g protein each",baseServings:4,prepTime:15,cookTime:50,tags:["Meal Prep","Chicken","High Protein"],photo:null,nutrition:{calories:590,protein:50,carbs:42,fat:18},
+ingredientSections:[{id:1,title:"Chicken & feta",ingredients:[{id:1,name:"Chicken breast",amount:640,unit:"g",piece:{label:"breast",grams:160}},{id:2,name:"Cherry tomatoes",amount:250,unit:"g",piece:{label:"punnet",grams:250}},{id:3,name:"Garlic (whole head)",amount:1,unit:"pcs"},{id:4,name:"Feta block",amount:120,unit:"g",piece:{label:"block",grams:200}},{id:5,name:"Olive oil",amount:20,unit:"ml"}]},{id:2,title:"Couscous salad",ingredients:[{id:6,name:"Dry couscous",amount:300,unit:"g"},{id:7,name:"Cucumber",amount:200,unit:"g",piece:{label:"medium",grams:300}},{id:8,name:"Red bell pepper",amount:150,unit:"g",piece:{label:"medium",grams:160}},{id:9,name:"Red onion",amount:50,unit:"g",piece:{label:"medium",grams:110}},{id:10,name:"Lime juice",amount:30,unit:"ml"},{id:11,name:"Fresh basil",amount:10,unit:"g"}]}],
+steps:[{id:1,text:"Preheat oven to 200°C. Place chicken and cherry tomatoes in a large baking dish. Add the head of garlic cut in half. Drizzle with olive oil, season with Italian herbs, salt and pepper. Place the feta block in the middle.",timerMinutes:null},{id:2,text:"Bake at 200°C.",timerMinutes:30},{id:3,text:"Stir everything together — tomatoes and feta break down into a sauce. Return to oven.",timerMinutes:20},{id:4,text:"Pour boiling water over couscous (equal volume), cover and let it swell.",timerMinutes:5},{id:5,text:"Fluff couscous with a fork. Dice cucumber, pepper and red onion. Mix with couscous, lime juice, fresh basil, salt and pepper.",timerMinutes:null},{id:6,text:"Divide chicken and couscous salad into 4 meal prep containers. Keeps up to 4 days in the fridge.",timerMinutes:null}]},
+{id:7,name:"Honey Mustard Shredded Chicken Bowl",category:"Meal Prep",description:"Slow-baked honey mustard pulled chicken with fluffy quinoa and vibrant mango salsa",baseServings:1,prepTime:15,cookTime:140,tags:["Meal Prep","Chicken","High Protein"],photo:null,nutrition:{calories:480,protein:42,carbs:52,fat:10},
+ingredientSections:[{id:1,title:"Chicken",ingredients:[{id:1,name:"Chicken breast",amount:150,unit:"g",piece:{label:"breast",grams:150}},{id:2,name:"Honey",amount:10,unit:"g"},{id:3,name:"Dijon mustard",amount:15,unit:"g"},{id:4,name:"Olive oil",amount:3,unit:"ml"}]},{id:2,title:"Quinoa",ingredients:[{id:5,name:"Quinoa",amount:80,unit:"g"},{id:6,name:"Water",amount:160,unit:"ml"}]},{id:3,title:"Mango salsa",ingredients:[{id:7,name:"Mango",amount:80,unit:"g",piece:{label:"medium",grams:300}},{id:8,name:"Cucumber",amount:70,unit:"g",piece:{label:"medium",grams:300}},{id:9,name:"Bell pepper (red & yellow)",amount:70,unit:"g",piece:{label:"medium",grams:160}},{id:10,name:"Red onion",amount:20,unit:"g",piece:{label:"medium",grams:110}},{id:11,name:"Olive oil",amount:2,unit:"ml"},{id:12,name:"Lime juice",amount:10,unit:"ml"}]}],
+steps:[{id:1,text:"Mix chicken breast with honey, Dijon mustard, olive oil, dried garlic, salt, pepper and sweet paprika until well coated.",timerMinutes:null},{id:2,text:"Place in a baking dish with a splash of water. Cover tightly with foil. Bake at 180°C.",timerMinutes:120},{id:3,text:"Uncover, shred chicken with two forks and mix into the sauce. Bake uncovered until caramelised.",timerMinutes:20},{id:4,text:"Cook quinoa in salted water until fully absorbed. Remove from heat and rest covered.",timerMinutes:15},{id:5,text:"Dice mango, cucumber, bell pepper and red onion into small pieces. Toss with olive oil, lime juice, chili flakes, salt and cilantro.",timerMinutes:null},{id:6,text:"Serve shredded chicken over quinoa with mango salsa on the side.",timerMinutes:null}]}
+];
+
+const fmtA=n=>n%1===0?String(n):parseFloat(n.toFixed(1)).toString();
+const scl=(a,b,t)=>fmtA((a/b)*t);
+const fmtM=m=>m===0?"None":m<60?m+" min":Math.floor(m/60)+"h"+(m%60?" "+m%60+"m":"");
+const fmtCD=s=>Math.floor(s/60)+":"+(s%60<10?"0":"")+s%60;
+const getSec=r=>r.ingredientSections||[{id:1,title:"",ingredients:r.ingredients||[]}];
+
+// Shopping hint: convert a scaled weight into whole-ish pieces, rounded to the nearest half.
+// Returns null when the amount is too small to be worth expressing as pieces.
+function pieceHint(scaledAmount,piece){
+  if(!piece||!piece.grams)return null;
+  const n=scaledAmount/piece.grams;
+  const r=Math.round(n*2)/2;
+  if(r<0.5)return null;
+  const whole=Math.floor(r),half=(r-whole)>=0.5;
+  let s=whole?String(whole):"";
+  if(half)s+=(whole?" ½":"½");
+  return "≈ "+s+" "+piece.label;
+}
+
+function beep(){try{const c=new(window.AudioContext||window.webkitAudioContext)();[0,.35,.7].forEach(d=>{const o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=880;g.gain.setValueAtTime(.3,c.currentTime+d);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+d+.4);o.start(c.currentTime+d);o.stop(c.currentTime+d+.5);});}catch(e){}}
+
+function Tag({t}){return E("span",{style:{background:G100,color:G700,fontSize:11,fontWeight:500,padding:"3px 10px",borderRadius:20,whiteSpace:"nowrap"}},t);}
+
+function StepTimer({defaultMinutes}){
+  const[min,setMin]=useState(defaultMinutes);
+  const[status,setStatus]=useState("idle");
+  const[rem,setRem]=useState(defaultMinutes*60);
+  const rRef=useRef(defaultMinutes*60),iv=useRef(null);
+  useEffect(()=>()=>clearInterval(iv.current),[]);
+  const onMin=v=>{const m=Math.max(1,Math.round(+v||1));setMin(m);setRem(m*60);rRef.current=m*60;};
+  const start=()=>{if(typeof Notification!="undefined"&&Notification.permission==="default")Notification.requestPermission();if(status==="done"){rRef.current=min*60;setRem(min*60);}setStatus("running");iv.current=setInterval(()=>{rRef.current--;if(rRef.current<=0){clearInterval(iv.current);setStatus("done");setRem(0);beep();if(typeof Notification!="undefined"&&Notification.permission==="granted")new Notification("Timer done — "+min+" min",{body:"Time is up!"});}else setRem(rRef.current);},1000);};
+  const pause=()=>{clearInterval(iv.current);setStatus("paused");};
+  const reset=()=>{clearInterval(iv.current);rRef.current=min*60;setRem(min*60);setStatus("idle");};
+  const pct=((min*60-rem)/(min*60))*100;const done=status==="done";
+  return E("div",{style:{position:"relative",overflow:"hidden",background:done?"#EAF3DE":"#FEF3E2",border:"0.5px solid "+BOR2,borderRadius:8,padding:"8px 12px",marginTop:10,display:"flex",alignItems:"center",justifyContent:"space-between",gap:10}},
+    E("div",{style:{position:"absolute",left:0,top:0,bottom:0,width:pct+"%",background:done?"rgba(59,109,17,.12)":"rgba(146,82,26,.1)",transition:"width 1s linear"}}),
+    E("span",{style:{position:"relative",fontSize:13,fontWeight:500,color:done?G600:"#92521A",display:"flex",alignItems:"center",gap:5}},
+      status==="idle"&&E("span",{style:{display:"flex",alignItems:"center",gap:5}},"⏱",E("input",{type:"number",min:1,value:min,onChange:e=>onMin(e.target.value),style:{width:44,padding:"2px 5px",border:"0.5px solid "+BOR2,borderRadius:5,fontSize:13,textAlign:"center",background:"#fff",color:"#333"}}),"min"),
+      status==="running"&&("⏱ "+fmtCD(rem)),status==="paused"&&("⏸ "+fmtCD(rem)),status==="done"&&"✅ Done!"),
+    E("div",{style:{position:"relative",display:"flex",gap:5}},
+      (status==="idle"||done)&&E("button",{onClick:start,style:{background:done?G600:"#92521A",color:"#fff",border:"none",borderRadius:6,padding:"4px 12px",fontSize:12,cursor:"pointer"}},done?"Again":"Start"),
+      status==="running"&&E("button",{onClick:pause,style:{background:"#92521A",color:"#fff",border:"none",borderRadius:6,padding:"4px 12px",fontSize:12,cursor:"pointer"}},"Pause"),
+      status==="paused"&&E("button",{onClick:start,style:{background:"#92521A",color:"#fff",border:"none",borderRadius:6,padding:"4px 12px",fontSize:12,cursor:"pointer"}},"Resume"),
+      (status==="running"||status==="paused")&&E("button",{onClick:reset,style:{background:"transparent",border:"0.5px solid "+BOR2,borderRadius:6,padding:"4px 10px",fontSize:12,cursor:"pointer",color:MUT}},"Reset")));
+}
+
+function LeafDeco(){return E("svg",{width:95,height:115,viewBox:"0 0 95 115",fill:"none",style:{position:"absolute",top:-8,right:-4,opacity:.5,pointerEvents:"none"}},E("path",{d:"M62 8 C82 22 90 52 72 82 C57 107 42 110 37 102 C30 90 37 72 52 57 C64 44 67 27 62 8Z",fill:G200}),E("path",{d:"M62 8 C62 32 57 62 37 102",stroke:"#7BAA40",strokeWidth:1.5,fill:"none"}),E("path",{d:"M62 32 C72 37 77 47 72 57",stroke:"#7BAA40",strokeWidth:1,fill:"none"}),E("path",{d:"M59 57 C67 60 70 70 64 78",stroke:"#7BAA40",strokeWidth:1,fill:"none"}));}
+
+function RecipeCard({recipe,onClick}){
+  const[hov,setHov]=useState(false);
+  return E("div",{onClick,onMouseEnter:()=>setHov(true),onMouseLeave:()=>setHov(false),
+    style:{background:CARD,borderRadius:16,overflow:"hidden",cursor:"pointer",
+      boxShadow:hov?"0 6px 24px rgba(0,0,0,.11)":"0 1px 6px rgba(0,0,0,.06)",
+      transition:"box-shadow .2s,transform .2s",transform:hov?"translateY(-3px)":"none"}},
+    E("div",{style:{position:"relative",height:180,background:G100,overflow:"hidden"}},
+      recipe.photo
+        ?E("img",{src:recipe.photo,alt:recipe.name,style:{width:"100%",height:"100%",objectFit:"cover",display:"block"}})
+        :E("div",{style:{width:"100%",height:"100%",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:8,color:G600,background:"#EAF0DC"}},
+            E("svg",{width:40,height:40,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:1.2},
+              E("path",{d:"M3 11l19-9-9 19-2-8-8-2z"}))
+          )
+    ),
+    E("div",{style:{padding:"14px 16px 18px"}},
+      E("div",{style:{display:"flex",gap:5,flexWrap:"wrap",marginBottom:9}},recipe.tags.slice(0,4).map(t=>E(Tag,{key:t,t}))),
+      E("h3",{style:{fontFamily:SERIF,fontSize:17,fontWeight:700,marginBottom:6,lineHeight:1.25,color:G900}},recipe.name),
+      E("p",{style:{fontSize:12,color:MUT,lineHeight:1.55,marginBottom:14,display:"-webkit-box",WebkitLineClamp:2,WebkitBoxOrient:"vertical",overflow:"hidden"}},recipe.description),
+      E("div",{style:{display:"flex",gap:16,fontSize:11,color:MUT2,borderTop:"0.5px solid "+BOR,paddingTop:10}},
+        E("span",{style:{display:"flex",alignItems:"center",gap:4}},
+          E("svg",{width:12,height:12,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2},E("path",{d:"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"}),E("circle",{cx:9,cy:7,r:4}),E("path",{d:"M23 21v-2a4 4 0 0 0-3-3.87"}),E("path",{d:"M16 3.13a4 4 0 0 1 0 7.75"})),
+          recipe.baseServings+" servings"),
+        E("span",{style:{display:"flex",alignItems:"center",gap:4}},
+          E("svg",{width:12,height:12,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2},E("circle",{cx:12,cy:12,r:10}),E("polyline",{points:"12 6 12 12 16 14"})),
+          fmtM(recipe.prepTime+recipe.cookTime))
+      )
+    )
+  );
+}
+
+function ListView({recipes,onSelect}){
+  const[q,setQ]=useState("");
+  const fl=recipes.filter(r=>[r.name,r.category,...r.tags].some(s=>s.toLowerCase().includes(q.toLowerCase())));
+  return E("div",{style:{maxWidth:700,margin:"0 auto",padding:"0 0 40px"}},
+    E("div",{style:{position:"relative",padding:"32px 20px 16px",overflow:"hidden"}},
+      E(LeafDeco),
+      E("div",{style:{position:"relative",zIndex:1}},
+        E("h1",{style:{fontFamily:SERIF,fontSize:28,fontWeight:700,color:G900,lineHeight:1.15}},"My Recipe Book"),
+        E("p",{style:{fontSize:13,color:MUT,marginTop:5}},recipes.length+" recipes")
+      ),
+      E("div",{style:{marginTop:18,position:"relative",zIndex:1}},
+        E("div",{style:{position:"relative",display:"inline-block"}},
+          E("span",{style:{position:"absolute",left:11,top:"50%",transform:"translateY(-50%)",pointerEvents:"none",color:MUT2}},
+            E("svg",{width:14,height:14,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2},E("circle",{cx:11,cy:11,r:8}),E("line",{x1:21,y1:21,x2:16.65,y2:16.65}))),
+          E("input",{placeholder:"Search by name, tag or category…",value:q,onChange:e=>setQ(e.target.value),
+            style:{padding:"10px 14px 10px 34px",background:CARD,border:"0.5px solid "+BOR,borderRadius:10,fontSize:13,color:G900,width:290}})
+        )
+      )
+    ),
+    E("div",{style:{padding:"4px 20px 0"}},
+      fl.length===0
+        ?E("div",{style:{textAlign:"center",color:MUT,padding:"3rem 0",fontSize:14}},'No recipes found for "'+q+'"')
+        :E("div",{style:{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(270px,1fr))",gap:"1.1rem"}},
+            fl.map(r=>E(RecipeCard,{key:r.id,recipe:r,onClick:()=>onSelect(r)})))
+    )
+  );
+}
+
+function DetailView({recipe,onBack}){
+  const[srv,setSrv]=useState(recipe.baseServings);
+  const secs=getSec(recipe);
+  const hasNutr=recipe.nutrition&&Object.values(recipe.nutrition).some(v=>v!=null&&v>0);
+  const statBox=(label,val)=>E("div",{style:{textAlign:"center",padding:"0 12px"}},
+    E("div",{style:{fontSize:10,textTransform:"uppercase",letterSpacing:".9px",color:MUT2,marginBottom:8,fontWeight:500}},label),
+    E("div",{style:{fontSize:16,fontWeight:600,color:G900}},val));
+  const sc={background:CARD,borderRadius:14,padding:"20px",marginBottom:14,boxShadow:"0 1px 5px rgba(0,0,0,.05)"};
+  return E("div",{style:{maxWidth:700,margin:"0 auto",paddingBottom:60}},
+    E("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"15px 20px",background:BG,position:"sticky",top:0,zIndex:10,borderBottom:"0.5px solid "+BOR}},
+      E("button",{onClick:onBack,style:{background:"none",border:"none",color:G700,cursor:"pointer",fontSize:13,fontWeight:500,display:"flex",alignItems:"center",gap:5,padding:0}},
+        E("svg",{width:16,height:16,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2},E("line",{x1:19,y1:12,x2:5,y2:12}),E("polyline",{points:"12 19 5 12 12 5"})),
+        "All recipes")
+    ),
+    E("div",{style:{padding:"20px 20px 0"}},
+      E("div",{style:{display:"grid",gridTemplateColumns:"1fr "+(recipe.photo?"auto":""),gap:20,alignItems:"start",marginBottom:20}},
+        E("div",null,
+          E("div",{style:{display:"flex",gap:6,flexWrap:"wrap",marginBottom:10}},recipe.tags.map(t=>E(Tag,{key:t,t}))),
+          E("h1",{style:{fontFamily:SERIF,fontSize:26,fontWeight:700,color:G900,lineHeight:1.2,marginBottom:8}},recipe.name),
+          E("p",{style:{fontSize:13,color:MUT,lineHeight:1.65}},recipe.description)
+        ),
+        recipe.photo&&E("img",{src:recipe.photo,alt:recipe.name,
+          style:{width:180,height:145,objectFit:"cover",borderRadius:14,display:"block",flexShrink:0,boxShadow:"0 2px 14px rgba(0,0,0,.12)"}})
+      ),
+      E("div",{style:{background:STATS,borderRadius:14,padding:"16px 20px",marginBottom:14,
+        display:"grid",gridTemplateColumns:"auto 1fr 1fr 1fr",gap:"0",alignItems:"center"}},
+        E("div",{style:{paddingRight:24,borderRight:"0.5px solid "+BOR2}},
+          E("div",{style:{fontSize:10,textTransform:"uppercase",letterSpacing:".9px",color:MUT2,marginBottom:8,fontWeight:500}},"Servings"),
+          E("div",{style:{display:"flex",alignItems:"center",gap:10}},
+            E("button",{onClick:()=>setSrv(s=>Math.max(1,s-1)),style:{width:26,height:26,borderRadius:"50%",border:"1px solid "+BOR2,background:CARD,color:G900,fontSize:16,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center"}},"−"),
+            E("span",{style:{fontSize:20,fontWeight:700,color:G900,minWidth:22,textAlign:"center"}},srv),
+            E("button",{onClick:()=>setSrv(s=>s+1),style:{width:26,height:26,borderRadius:"50%",border:"1px solid "+BOR2,background:CARD,color:G900,fontSize:16,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center"}},"+")
+          )
+        ),
+        statBox("Prep time",fmtM(recipe.prepTime)),
+        statBox("Cook time",fmtM(recipe.cookTime)),
+        E("div",{style:{textAlign:"center",padding:"0 12px"}},
+          E("div",{style:{fontSize:10,textTransform:"uppercase",letterSpacing:".9px",color:MUT2,marginBottom:8,fontWeight:500}},"Total"),
+          E("div",{style:{fontSize:20,fontWeight:700,color:G700}},fmtM(recipe.prepTime+recipe.cookTime)))
+      ),
+      E("div",{style:sc},
+        E("h2",{style:{fontFamily:SERIF,fontSize:19,fontWeight:700,color:G900,marginBottom:3}},"Ingredients"),
+        E("p",{style:{fontSize:12,color:MUT2,marginBottom:16}},"for "+srv+" serving"+(srv!==1?"s":"")),
+        secs.map(sec=>E("div",{key:sec.id,style:{marginBottom:sec.title?"1.25rem":0}},
+          sec.title&&E("div",{style:{fontSize:11,fontWeight:600,textTransform:"uppercase",letterSpacing:".8px",color:G600,paddingBottom:6,marginBottom:4,borderBottom:"1.5px solid "+G100}},sec.title),
+          sec.ingredients.map((ing,i)=>{
+            const scaled=(ing.amount/recipe.baseServings)*srv;
+            const hint=pieceHint(scaled,ing.piece);
+            return E("div",{key:ing.id,style:{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:12,padding:"9px 0",borderBottom:i<sec.ingredients.length-1?"0.5px solid "+BOR:"none"}},
+              E("span",{style:{fontSize:14,color:G900}},ing.name),
+              E("span",{style:{textAlign:"right",flexShrink:0}},
+                E("span",{style:{fontSize:14,color:MUT}},fmtA(scaled)+" "+ing.unit),
+                hint&&E("span",{style:{display:"block",fontSize:11,color:MUT2,marginTop:2}},hint)
+              ));
+          })
+        ))
+      ),
+      E("div",{style:sc},
+        E("h2",{style:{fontFamily:SERIF,fontSize:19,fontWeight:700,color:G900,marginBottom:16}},"Instructions"),
+        recipe.steps.map((step,i)=>E("div",{key:step.id,style:{display:"flex",gap:14,marginBottom:i<recipe.steps.length-1?"1.5rem":0}},
+          E("div",{style:{width:26,height:26,minWidth:26,borderRadius:"50%",background:G100,color:G700,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:700,marginTop:1}},i+1),
+          E("div",{style:{flex:1}},
+            E("p",{style:{fontSize:14,lineHeight:1.75,color:G900,margin:0}},step.text),
+            step.timerMinutes&&E(StepTimer,{key:"t"+step.id+"-"+step.timerMinutes,defaultMinutes:step.timerMinutes}))))
+      ),
+      hasNutr&&E("div",{style:sc},
+        E("h2",{style:{fontFamily:SERIF,fontSize:19,fontWeight:700,color:G900,marginBottom:3}},"Nutrition"),
+        E("p",{style:{fontSize:12,color:MUT2,marginBottom:16}},"per 1 serving"),
+        E("div",{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}},
+          [{label:"Calories",key:"calories",unit:"kcal",color:G700},
+           {label:"Protein",key:"protein",unit:"g",color:"#185FA5"},
+           {label:"Carbs",key:"carbs",unit:"g",color:"#8A5200"},
+           {label:"Fat",key:"fat",unit:"g",color:"#6B3A8A"}
+          ].map(({label,key,unit,color})=>{
+            if(!recipe.nutrition[key])return null;
+            return E("div",{key,style:{background:BG,borderRadius:10,padding:"14px 10px",textAlign:"center"}},
+              E("div",{style:{fontSize:10,textTransform:"uppercase",letterSpacing:".7px",color:MUT2,marginBottom:5,fontWeight:500}},label),
+              E("div",{style:{fontSize:22,fontWeight:700,color,lineHeight:1}},Math.round(recipe.nutrition[key])),
+              E("div",{style:{fontSize:11,color:MUT2,marginTop:3}},unit));
+          })
+        )
+      )
+    )
+  );
+}
+
+function App(){
+  const[sel,setSel]=useState(null);
+  return E("div",{style:{background:BG,minHeight:"100vh"}},
+    sel
+      ?E(DetailView,{recipe:sel,onBack:()=>setSel(null)})
+      :E(ListView,{recipes:SAMPLE,onSelect:setSel})
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(E(App));
+</script></body></html>
