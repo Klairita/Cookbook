@@ -602,7 +602,7 @@
     "category": "Ice Cream",
     "description": "High-protein chocolate soft-serve made in a Ninja Creami — no xanthan gum needed",
     "baseServings": 1,
-    "prepTime": 5,
+    "prepTime": 7,
     "cookTime": 0,
     "tags": [
       "Ice Cream",
@@ -658,7 +658,12 @@
       },
       {
         "id": 4,
-        "text": "Re-spin if crumbly, then serve immediately.",
+        "text": "If the texture is snow-like rather than creamy, mix in 1–2 tbsp of milk and re-spin.",
+        "timerMinutes": null
+      },
+      {
+        "id": 5,
+        "text": "Serve immediately.",
         "timerMinutes": null
       }
     ]
@@ -669,7 +674,7 @@
     "category": "Ice Cream",
     "description": "Thicker, creamier high-protein chocolate ice cream made in a Ninja Creami, stabilised with xanthan gum",
     "baseServings": 1,
-    "prepTime": 5,
+    "prepTime": 7,
     "cookTime": 0,
     "tags": [
       "Ice Cream",
@@ -736,7 +741,12 @@
       },
       {
         "id": 4,
-        "text": "Re-spin if crumbly, then serve immediately.",
+        "text": "If the texture is snow-like rather than creamy, mix in 1–2 tbsp of milk and re-spin.",
+        "timerMinutes": null
+      },
+      {
+        "id": 5,
+        "text": "Serve immediately.",
         "timerMinutes": null
       }
     ]
