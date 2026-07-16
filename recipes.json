@@ -16,7 +16,12 @@
       "Dinner"
     ],
     "photo": null,
-    "nutrition": null,
+    "nutrition": {
+      "calories": 700,
+      "protein": 66,
+      "carbs": 70,
+      "fat": 17
+    },
     "source": null,
     "ingredientSections": [
       {
@@ -132,7 +137,12 @@
       "Dinner"
     ],
     "photo": null,
-    "nutrition": null,
+    "nutrition": {
+      "calories": 500,
+      "protein": 61,
+      "carbs": 38,
+      "fat": 10
+    },
     "source": null,
     "ingredientSections": [
       {
@@ -614,7 +624,10 @@
     ],
     "photo": null,
     "nutrition": {
-      "calories": 270
+      "calories": 280,
+      "protein": 43,
+      "carbs": 10,
+      "fat": 7
     },
     "source": null,
     "ingredientSections": [
@@ -690,7 +703,10 @@
     ],
     "photo": null,
     "nutrition": {
-      "calories": 190
+      "calories": 210,
+      "protein": 31,
+      "carbs": 8,
+      "fat": 6
     },
     "source": null,
     "ingredientSections": [
@@ -779,7 +795,10 @@
     ],
     "photo": null,
     "nutrition": {
-      "calories": 590
+      "calories": 600,
+      "protein": 48,
+      "carbs": 61,
+      "fat": 20
     },
     "source": "https://www.instagram.com/reel/DWeSJf7jEU4/?igsh=ZjRscTRtOG1sNWlx",
     "ingredientSections": [
