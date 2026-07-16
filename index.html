@@ -216,7 +216,9 @@ function DetailView({recipe,onBack}){
               E("div",{style:{fontSize:11,color:MUT2,marginTop:3}},unit));
           })
         )
-      )
+      ),
+      recipe.source&&E("p",{style:{textAlign:"center",fontSize:11,color:MUT2,marginBottom:20}},
+        "Source: ",E("a",{href:recipe.source,target:"_blank",rel:"noopener noreferrer",style:{color:MUT2}},recipe.source))
     )
   );
 }
