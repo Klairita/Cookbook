@@ -17,3 +17,10 @@ this fixed set: `Breakfast`, `Lunch`, `Dinner`, `Snack`, `Dessert`,
 snack that's also a dessert). Beyond these meal-type tags, feel free to add
 other descriptive tags (ingredients, cuisine, diet, prep time, etc.) as
 appropriate — there are no fixed rules for those.
+
+## Recipe language
+
+The cookbook is English-only. If a source recipe (text, screenshot, etc.) is
+in another language, translate the name, description, ingredients and steps
+to English before adding it to `recipes.json` — don't leave any part in the
+original language.

@@ -17,6 +17,7 @@
     ],
     "photo": null,
     "nutrition": null,
+    "source": null,
     "ingredientSections": [
       {
         "id": 1,
@@ -132,6 +133,7 @@
     ],
     "photo": null,
     "nutrition": null,
+    "source": null,
     "ingredientSections": [
       {
         "id": 1,
@@ -292,6 +294,7 @@
       "carbs": 42,
       "fat": 18
     },
+    "source": null,
     "ingredientSections": [
       {
         "id": 1,
@@ -451,6 +454,7 @@
       "carbs": 52,
       "fat": 10
     },
+    "source": null,
     "ingredientSections": [
       {
         "id": 1,
@@ -609,7 +613,10 @@
       "High Protein"
     ],
     "photo": null,
-    "nutrition": null,
+    "nutrition": {
+      "calories": 270
+    },
+    "source": null,
     "ingredientSections": [
       {
         "id": 1,
@@ -682,7 +689,10 @@
       "Creamy"
     ],
     "photo": null,
-    "nutrition": null,
+    "nutrition": {
+      "calories": 190
+    },
+    "source": null,
     "ingredientSections": [
       {
         "id": 1,
@@ -747,6 +757,179 @@
       {
         "id": 5,
         "text": "Serve immediately.",
+        "timerMinutes": null
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Crispy Rice Tuna Bowl with Peanut Dressing",
+    "category": "Meal Prep",
+    "description": "Soy-baked crispy rice with tuna, edamame, avocado and cucumber, tossed in a creamy peanut-lime dressing",
+    "baseServings": 1,
+    "prepTime": 15,
+    "cookTime": 35,
+    "tags": [
+      "Meal Prep",
+      "Tuna",
+      "Asian",
+      "High Protein",
+      "Lunch",
+      "Dinner"
+    ],
+    "photo": null,
+    "nutrition": {
+      "calories": 590
+    },
+    "source": "https://www.instagram.com/reel/DWeSJf7jEU4/?igsh=ZjRscTRtOG1sNWlx",
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "Crispy Rice",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Jasmine rice (dry)",
+            "amount": 50,
+            "unit": "g"
+          },
+          {
+            "id": 2,
+            "name": "Olive oil",
+            "amount": 5,
+            "unit": "ml"
+          },
+          {
+            "id": 3,
+            "name": "Soy sauce",
+            "amount": 7.5,
+            "unit": "ml"
+          },
+          {
+            "id": 4,
+            "name": "Tamari",
+            "amount": 15,
+            "unit": "ml"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Tuna Mix",
+        "ingredients": [
+          {
+            "id": 5,
+            "name": "Tuna in water, drained",
+            "amount": 110,
+            "unit": "g"
+          },
+          {
+            "id": 6,
+            "name": "Cucumber",
+            "amount": 100,
+            "unit": "g",
+            "piece": {
+              "label": "medium",
+              "grams": 300
+            }
+          },
+          {
+            "id": 7,
+            "name": "Avocado",
+            "amount": 30,
+            "unit": "g",
+            "piece": {
+              "label": "medium",
+              "grams": 200
+            }
+          },
+          {
+            "id": 8,
+            "name": "Edamame, shelled",
+            "amount": 40,
+            "unit": "g"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Peanut Dressing",
+        "ingredients": [
+          {
+            "id": 9,
+            "name": "Plain Greek yogurt (0%)",
+            "amount": 40,
+            "unit": "g"
+          },
+          {
+            "id": 10,
+            "name": "Peanut butter",
+            "amount": 8,
+            "unit": "g"
+          },
+          {
+            "id": 11,
+            "name": "Honey",
+            "amount": 5,
+            "unit": "g"
+          },
+          {
+            "id": 12,
+            "name": "Soy sauce",
+            "amount": 7.5,
+            "unit": "ml"
+          },
+          {
+            "id": 13,
+            "name": "Lime juice",
+            "amount": 15,
+            "unit": "ml"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Toppings",
+        "ingredients": [
+          {
+            "id": 14,
+            "name": "Sesame seeds",
+            "amount": 5,
+            "unit": "g"
+          },
+          {
+            "id": 15,
+            "name": "Chili flakes",
+            "amount": 1,
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Cook the rice, let it cool, then mix with the olive oil and soy sauce. Spread out and bake at 220°C (430°F) for about 30–40 minutes, until nicely crispy.",
+        "timerMinutes": 35
+      },
+      {
+        "id": 2,
+        "text": "Meanwhile, mix the tuna, edamame, cucumber and avocado together.",
+        "timerMinutes": null
+      },
+      {
+        "id": 3,
+        "text": "Blend the dressing ingredients until smooth, seasoning with garlic, ginger and pepper to taste (add a splash of water for a thinner consistency if needed).",
+        "timerMinutes": null
+      },
+      {
+        "id": 4,
+        "text": "Toss the crispy rice and tuna mix with the dressing. Sprinkle with sesame seeds and chili flakes.",
+        "timerMinutes": null
+      },
+      {
+        "id": 5,
+        "text": "If meal-prepping in a container, keep the dressing separate and mix it in just before eating.",
         "timerMinutes": null
       }
     ]
