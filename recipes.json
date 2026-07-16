@@ -595,5 +595,150 @@
         "timerMinutes": null
       }
     ]
+  },
+  {
+    "id": 8,
+    "name": "Basic Protein Ice Cream (No Xanthan)",
+    "category": "Ice Cream",
+    "description": "High-protein chocolate soft-serve made in a Ninja Creami — no xanthan gum needed",
+    "baseServings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "Ice Cream",
+      "High Protein"
+    ],
+    "photo": null,
+    "nutrition": null,
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Unsweetened soy milk",
+            "amount": 300,
+            "unit": "ml"
+          },
+          {
+            "id": 2,
+            "name": "Chocolate protein powder",
+            "amount": 30,
+            "unit": "g",
+            "piece": {
+              "label": "scoop",
+              "grams": 30
+            }
+          },
+          {
+            "id": 3,
+            "name": "Plain Greek yogurt (0–2%)",
+            "amount": 100,
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Whisk soy milk, chocolate protein powder and Greek yogurt together until completely smooth.",
+        "timerMinutes": null
+      },
+      {
+        "id": 2,
+        "text": "Pour into a Ninja Creami pint container and freeze solid.",
+        "timerMinutes": 1440
+      },
+      {
+        "id": 3,
+        "text": "Remove the lid and process the frozen pint on the Ice Cream setting.",
+        "timerMinutes": null
+      },
+      {
+        "id": 4,
+        "text": "Re-spin if crumbly, then serve immediately.",
+        "timerMinutes": null
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Basic Protein Ice Cream (With Xanthan)",
+    "category": "Ice Cream",
+    "description": "Thicker, creamier high-protein chocolate ice cream made in a Ninja Creami, stabilised with xanthan gum",
+    "baseServings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "Ice Cream",
+      "High Protein",
+      "Creamy"
+    ],
+    "photo": null,
+    "nutrition": null,
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Unsweetened almond milk",
+            "amount": 350,
+            "unit": "ml"
+          },
+          {
+            "id": 2,
+            "name": "Chocolate protein powder",
+            "amount": 30,
+            "unit": "g",
+            "piece": {
+              "label": "scoop",
+              "grams": 30
+            }
+          },
+          {
+            "id": 3,
+            "name": "Plain Greek yogurt (0–2%)",
+            "amount": 50,
+            "unit": "g"
+          },
+          {
+            "id": 4,
+            "name": "Xanthan gum",
+            "amount": 1,
+            "unit": "g",
+            "piece": {
+              "label": "tsp",
+              "grams": 4
+            }
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Blend almond milk, chocolate protein powder, Greek yogurt and xanthan gum until completely smooth — blending helps the xanthan gum dissolve without clumping.",
+        "timerMinutes": null
+      },
+      {
+        "id": 2,
+        "text": "Pour into a Ninja Creami pint container and freeze solid.",
+        "timerMinutes": 1440
+      },
+      {
+        "id": 3,
+        "text": "Remove the lid and process the frozen pint on the Ice Cream setting.",
+        "timerMinutes": null
+      },
+      {
+        "id": 4,
+        "text": "Re-spin if crumbly, then serve immediately.",
+        "timerMinutes": null
+      }
+    ]
   }
 ]
