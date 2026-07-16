@@ -11,7 +11,8 @@
       "Healthy",
       "Chicken",
       "Quick",
-      "High Protein"
+      "High Protein",
+      "Dinner"
     ],
     "photo": null,
     "nutrition": null,
@@ -124,7 +125,8 @@
       "Healthy",
       "Chicken",
       "Creamy",
-      "High Protein"
+      "High Protein",
+      "Dinner"
     ],
     "photo": null,
     "nutrition": null,
@@ -277,7 +279,9 @@
     "tags": [
       "Meal Prep",
       "Chicken",
-      "High Protein"
+      "High Protein",
+      "Lunch",
+      "Dinner"
     ],
     "photo": null,
     "nutrition": {
@@ -434,7 +438,9 @@
     "tags": [
       "Meal Prep",
       "Chicken",
-      "High Protein"
+      "High Protein",
+      "Lunch",
+      "Dinner"
     ],
     "photo": null,
     "nutrition": {
