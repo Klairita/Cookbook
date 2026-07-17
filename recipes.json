@@ -1272,5 +1272,143 @@
         "timerMinutes": null
       }
     ]
+  },
+  {
+    "id": 14,
+    "name": "Chicken Fajitas",
+    "category": "Mexican",
+    "description": "Oven-baked chicken fajitas with peppers and onion, served with warm tortillas, avocado, sour cream and cheese",
+    "baseServings": 4,
+    "prepTime": 10,
+    "cookTime": 30,
+    "tags": [
+      "Mexican",
+      "Chicken",
+      "Dinner",
+      "New"
+    ],
+    "photo": null,
+    "nutrition": {
+      "calories": 560,
+      "protein": 35,
+      "carbs": 37,
+      "fat": 31
+    },
+    "source": "https://www.instagram.com/reel/DXZNUK5jK1X/?igsh=MXVjbTY3bjljYjhqcA==",
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "Fajita Filling",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Chicken breast",
+            "amount": 300,
+            "unit": "g",
+            "piece": {
+              "label": "breast",
+              "grams": 150
+            }
+          },
+          {
+            "id": 2,
+            "name": "Bell peppers (yellow, red, green)",
+            "amount": 480,
+            "unit": "g",
+            "piece": {
+              "label": "medium",
+              "grams": 160
+            }
+          },
+          {
+            "id": 3,
+            "name": "Red onion",
+            "amount": 1,
+            "unit": "pcs"
+          },
+          {
+            "id": 4,
+            "name": "Garlic cloves",
+            "amount": 2,
+            "unit": "pcs"
+          },
+          {
+            "id": 5,
+            "name": "Olive oil",
+            "amount": 30,
+            "unit": "ml"
+          },
+          {
+            "id": 6,
+            "name": "Lime juice",
+            "amount": 30,
+            "unit": "ml"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "For Serving",
+        "ingredients": [
+          {
+            "id": 7,
+            "name": "Grated cheese",
+            "amount": 80,
+            "unit": "g"
+          },
+          {
+            "id": 8,
+            "name": "Avocado",
+            "amount": 1,
+            "unit": "pcs"
+          },
+          {
+            "id": 9,
+            "name": "Sour cream",
+            "amount": 80,
+            "unit": "g"
+          },
+          {
+            "id": 10,
+            "name": "Whole grain tortillas",
+            "amount": 4,
+            "unit": "pcs"
+          },
+          {
+            "id": 11,
+            "name": "Fresh parsley",
+            "amount": 5,
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Preheat the oven to 180°C (350°F). Slice the chicken breast into strips and cut the peppers and onion into strips.",
+        "timerMinutes": null
+      },
+      {
+        "id": 2,
+        "text": "On a parchment-lined baking tray, combine the chicken, peppers, onion and chopped garlic. Season with sweet paprika, smoked paprika, dried onion, dried garlic, cumin, oregano, salt, pepper and chili to taste, add the lime juice, drizzle with the olive oil, and mix everything together.",
+        "timerMinutes": null
+      },
+      {
+        "id": 3,
+        "text": "Bake for 25–30 minutes until golden.",
+        "timerMinutes": 28
+      },
+      {
+        "id": 4,
+        "text": "Sprinkle with the grated cheese and bake briefly until melted.",
+        "timerMinutes": 5
+      },
+      {
+        "id": 5,
+        "text": "Serve with warmed tortillas, avocado, sour cream and parsley.",
+        "timerMinutes": null
+      }
+    ]
   }
 ]
