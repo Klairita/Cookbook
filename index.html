@@ -78,8 +78,8 @@ function computeNutrition(recipe,foodsById,variant){
 function nutritionProvenance(nutr){
   if(nutr.total===0)return null;
   if(nutr.real===0)return"Estimated from generic nutrition data";
-  if(nutr.real===nutr.total)return"Calculated from your real product data";
-  return"Calculated from real product data ("+nutr.real+"/"+nutr.total+" ingredients) + generic estimates for the rest";
+  if(nutr.real===nutr.total)return"Calculated from your real* product data";
+  return"Calculated from real* product data ("+nutr.real+"/"+nutr.total+" ingredients) + generic estimates for the rest";
 }
 
 // Shopping hint: convert a scaled weight into whole-ish pieces, rounded to the nearest half.
@@ -242,14 +242,16 @@ function DetailView({recipe,foodsById,onBack}){
           sec.ingredients.map((ing,i)=>{
             const scaled=(ing.amount/recipe.baseServings)*srv;
             const hint=pieceHint(scaled,ing.piece);
+            const isReal=ing.foodId&&foodsById[ing.foodId]&&foodsById[ing.foodId].brand;
             return E("div",{key:ing.id,style:{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:12,padding:"9px 0",borderBottom:i<sec.ingredients.length-1?"0.5px solid "+BOR:"none"}},
-              E("span",{style:{fontSize:14,color:G900}},ing.name),
+              E("span",{style:{fontSize:14,color:G900}},ing.name,isReal&&E("span",{style:{color:G600}}," *")),
               E("span",{style:{textAlign:"right",flexShrink:0}},
                 E("span",{style:{fontSize:14,color:MUT}},fmtA(scaled)+" "+ing.unit),
                 hint&&E("span",{style:{display:"block",fontSize:11,color:MUT2,marginTop:2}},hint)
               ));
           })
-        ))
+        )),
+        nutr.real>0&&E("p",{style:{fontSize:11,color:MUT2,marginTop:12}},"* uses your real product data")
       ),
       E("div",{style:sc},
         E("h2",{style:{fontFamily:SERIF,fontSize:19,fontWeight:700,color:G900,marginBottom:16}},"Instructions"),
