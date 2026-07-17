@@ -145,12 +145,12 @@
   {
     "id": "orzo",
     "name": "Orzo (dry)",
-    "brand": null,
+    "brand": "Rummo",
     "per100": {
-      "calories": 371,
-      "protein": 13,
-      "carbs": 75,
-      "fat": 1.5
+      "calories": 356,
+      "protein": 14.5,
+      "carbs": 69.5,
+      "fat": 1.6
     }
   },
   {
@@ -233,12 +233,12 @@
   {
     "id": "dry-couscous",
     "name": "Couscous (dry)",
-    "brand": null,
+    "brand": "Bio",
     "per100": {
-      "calories": 376,
-      "protein": 12.8,
-      "carbs": 77,
-      "fat": 0.6
+      "calories": 341,
+      "protein": 12,
+      "carbs": 67,
+      "fat": 1.7
     }
   },
   {
@@ -310,12 +310,12 @@
   {
     "id": "quinoa",
     "name": "Quinoa (dry)",
-    "brand": null,
+    "brand": "Bio",
     "per100": {
-      "calories": 368,
+      "calories": 366,
       "protein": 14,
-      "carbs": 64,
-      "fat": 6
+      "carbs": 59,
+      "fat": 6.4
     }
   },
   {
