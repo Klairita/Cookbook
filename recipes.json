@@ -1786,5 +1786,110 @@
         "timerMinutes": null
       }
     ]
+  },
+  {
+    "id": 17,
+    "name": "Protein Breakfast Oatmeal",
+    "category": "Healthy",
+    "description": "Microwave oats with quark, chocolate whey and collagen protein, nut butter and fruit — a quick high-protein breakfast",
+    "baseServings": 1,
+    "prepTime": 5,
+    "cookTime": 1,
+    "tags": [
+      "Breakfast",
+      "High Protein",
+      "Quick"
+    ],
+    "photo": null,
+    "nutrition": {
+      "calories": 430,
+      "protein": 47,
+      "carbs": 47,
+      "fat": 8
+    },
+    "source": null,
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Oats",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "id": 2,
+            "name": "Almond milk",
+            "amount": 90,
+            "unit": "ml"
+          },
+          {
+            "id": 3,
+            "name": "Magerquark (low-fat quark)",
+            "amount": 125,
+            "unit": "g"
+          },
+          {
+            "id": 4,
+            "name": "Chia seeds",
+            "amount": 1,
+            "unit": "g"
+          },
+          {
+            "id": 5,
+            "name": "Chocolate whey protein",
+            "amount": 10,
+            "unit": "g"
+          },
+          {
+            "id": 6,
+            "name": "Collagen protein",
+            "amount": 15,
+            "unit": "g"
+          },
+          {
+            "id": 7,
+            "name": "Peanut, almond or hazelnut butter",
+            "amount": 5,
+            "unit": "g"
+          },
+          {
+            "id": 8,
+            "name": "Fruit (apple or berries)",
+            "amount": 80,
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Mix the oats with the chocolate whey and collagen protein powders.",
+        "timerMinutes": null
+      },
+      {
+        "id": 2,
+        "text": "Add the almond milk and microwave for 1 minute.",
+        "timerMinutes": 1
+      },
+      {
+        "id": 3,
+        "text": "Stir in the chia seeds and nut butter.",
+        "timerMinutes": null
+      },
+      {
+        "id": 4,
+        "text": "Add the quark and mix.",
+        "timerMinutes": null
+      },
+      {
+        "id": 5,
+        "text": "Top with fruit.",
+        "timerMinutes": null
+      }
+    ]
   }
 ]
