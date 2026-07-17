@@ -18,6 +18,9 @@ snack that's also a dessert). Beyond these meal-type tags, feel free to add
 other descriptive tags (ingredients, cuisine, diet, prep time, etc.) as
 appropriate — there are no fixed rules for those.
 
+Every newly added recipe should also get a `New` tag, so it's visible which
+recipes were recently added to the cookbook.
+
 ## Recipe language
 
 The cookbook is English-only. If a source recipe (text, screenshot, etc.) is
