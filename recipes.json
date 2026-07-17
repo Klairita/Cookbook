@@ -16,12 +16,6 @@
       "Dinner"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 700,
-      "protein": 66,
-      "carbs": 70,
-      "fat": 17
-    },
     "source": "https://www.instagram.com/reel/DT8WJDgjHRk/?igsh=MTY0ZnhwMzA4dDV0Nw==",
     "ingredientSections": [
       {
@@ -32,7 +26,8 @@
             "id": 1,
             "name": "Gnocchi (sweet potato recommended)",
             "amount": 150,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "gnocchi-sweet-potato"
           },
           {
             "id": 2,
@@ -42,31 +37,36 @@
             "piece": {
               "label": "breast",
               "grams": 150
-            }
+            },
+            "foodId": "chicken-breast"
           },
           {
             "id": 3,
             "name": "Passata",
             "amount": 100,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "passata"
           },
           {
             "id": 4,
             "name": "Lučina skyr",
             "amount": 20,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "skyr"
           },
           {
             "id": 5,
             "name": "Light mozzarella",
             "amount": 30,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "light-mozzarella"
           },
           {
             "id": 6,
             "name": "Sun-dried tomatoes",
             "amount": 20,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "sun-dried-tomatoes"
           },
           {
             "id": 7,
@@ -76,7 +76,8 @@
             "piece": {
               "label": "medium",
               "grams": 250
-            }
+            },
+            "foodId": "zucchini"
           },
           {
             "id": 8,
@@ -86,13 +87,15 @@
             "piece": {
               "label": "medium",
               "grams": 110
-            }
+            },
+            "foodId": "red-onion"
           },
           {
             "id": 9,
             "name": "Olive oil",
             "amount": 5,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "olive-oil"
           }
         ]
       }
@@ -137,12 +140,6 @@
       "Dinner"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 500,
-      "protein": 61,
-      "carbs": 38,
-      "fat": 10
-    },
     "source": "https://www.instagram.com/reel/DXmVpNdDAz8/?igsh=a3FoZWpwaWs3ZzQ1",
     "ingredientSections": [
       {
@@ -157,7 +154,8 @@
             "piece": {
               "label": "breast",
               "grams": 150
-            }
+            },
+            "foodId": "chicken-breast"
           },
           {
             "id": 2,
@@ -175,7 +173,8 @@
             "id": 4,
             "name": "Olive oil",
             "amount": 5,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "olive-oil"
           }
         ]
       },
@@ -187,31 +186,44 @@
             "id": 5,
             "name": "Butter",
             "amount": 20,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "butter"
           },
           {
             "id": 6,
             "name": "Onion (medium)",
             "amount": 1,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "onion",
+            "piece": {
+              "label": "medium",
+              "grams": 110
+            }
           },
           {
             "id": 7,
             "name": "Garlic cloves",
             "amount": 4,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "garlic",
+            "piece": {
+              "label": "clove",
+              "grams": 5
+            }
           },
           {
             "id": 8,
             "name": "Orzo",
             "amount": 160,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "orzo"
           },
           {
             "id": 9,
             "name": "Chicken broth",
             "amount": 400,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "chicken-broth"
           },
           {
             "id": 10,
@@ -221,25 +233,29 @@
             "piece": {
               "label": "bag",
               "grams": 125
-            }
+            },
+            "foodId": "spinach"
           },
           {
             "id": 11,
             "name": "Lučina skyr",
             "amount": 120,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "skyr"
           },
           {
             "id": 12,
             "name": "Parmesan",
             "amount": 40,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "parmesan"
           },
           {
             "id": 13,
             "name": "Frozen peas",
             "amount": 80,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "frozen-peas"
           }
         ]
       }
@@ -298,12 +314,6 @@
       "Dinner"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 590,
-      "protein": 50,
-      "carbs": 42,
-      "fat": 18
-    },
     "source": "https://www.instagram.com/reel/DVWWZ2nDFek/?igsh=MWFnYW0wcnp0d2Ywcw==",
     "ingredientSections": [
       {
@@ -318,7 +328,8 @@
             "piece": {
               "label": "breast",
               "grams": 160
-            }
+            },
+            "foodId": "chicken-breast"
           },
           {
             "id": 2,
@@ -328,13 +339,19 @@
             "piece": {
               "label": "punnet",
               "grams": 250
-            }
+            },
+            "foodId": "cherry-tomatoes"
           },
           {
             "id": 3,
             "name": "Garlic (whole head)",
             "amount": 1,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "garlic",
+            "piece": {
+              "label": "head",
+              "grams": 40
+            }
           },
           {
             "id": 4,
@@ -344,13 +361,15 @@
             "piece": {
               "label": "block",
               "grams": 200
-            }
+            },
+            "foodId": "feta"
           },
           {
             "id": 5,
             "name": "Olive oil",
             "amount": 20,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "olive-oil"
           }
         ]
       },
@@ -362,7 +381,8 @@
             "id": 6,
             "name": "Dry couscous",
             "amount": 300,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "dry-couscous"
           },
           {
             "id": 7,
@@ -372,7 +392,8 @@
             "piece": {
               "label": "medium",
               "grams": 300
-            }
+            },
+            "foodId": "cucumber"
           },
           {
             "id": 8,
@@ -382,7 +403,8 @@
             "piece": {
               "label": "medium",
               "grams": 160
-            }
+            },
+            "foodId": "bell-pepper"
           },
           {
             "id": 9,
@@ -392,13 +414,15 @@
             "piece": {
               "label": "medium",
               "grams": 110
-            }
+            },
+            "foodId": "red-onion"
           },
           {
             "id": 10,
             "name": "Lime juice",
             "amount": 30,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "lime-juice"
           },
           {
             "id": 11,
@@ -458,12 +482,6 @@
       "Dinner"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 590,
-      "protein": 52,
-      "carbs": 64,
-      "fat": 12
-    },
     "source": "https://www.instagram.com/reel/DV5egOIDNjG/?igsh=MWF3dm9kMDIzcGZiMw==",
     "ingredientSections": [
       {
@@ -478,25 +496,29 @@
             "piece": {
               "label": "breast",
               "grams": 150
-            }
+            },
+            "foodId": "chicken-breast"
           },
           {
             "id": 2,
             "name": "Honey",
             "amount": 10,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "honey"
           },
           {
             "id": 3,
             "name": "Dijon mustard",
             "amount": 15,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "dijon-mustard"
           },
           {
             "id": 4,
             "name": "Olive oil",
             "amount": 3,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "olive-oil"
           }
         ]
       },
@@ -508,7 +530,8 @@
             "id": 5,
             "name": "Quinoa",
             "amount": 80,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "quinoa"
           },
           {
             "id": 6,
@@ -530,7 +553,8 @@
             "piece": {
               "label": "medium",
               "grams": 180
-            }
+            },
+            "foodId": "granny-smith-apple"
           },
           {
             "id": 8,
@@ -540,7 +564,8 @@
             "piece": {
               "label": "medium",
               "grams": 300
-            }
+            },
+            "foodId": "cucumber"
           },
           {
             "id": 9,
@@ -550,7 +575,8 @@
             "piece": {
               "label": "medium",
               "grams": 160
-            }
+            },
+            "foodId": "bell-pepper"
           },
           {
             "id": 10,
@@ -560,19 +586,22 @@
             "piece": {
               "label": "medium",
               "grams": 110
-            }
+            },
+            "foodId": "red-onion"
           },
           {
             "id": 11,
             "name": "Olive oil",
             "amount": 2,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "olive-oil"
           },
           {
             "id": 12,
             "name": "Lime juice",
             "amount": 10,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "lime-juice"
           }
         ]
       }
@@ -623,12 +652,6 @@
       "High Protein"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 280,
-      "protein": 43,
-      "carbs": 10,
-      "fat": 7
-    },
     "source": null,
     "ingredientSections": [
       {
@@ -639,23 +662,26 @@
             "id": 1,
             "name": "Unsweetened soy milk",
             "amount": 300,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "unsweetened-soy-milk"
           },
           {
             "id": 2,
-            "name": "Chocolate protein powder",
+            "name": "Chocolate whey protein",
             "amount": 30,
             "unit": "g",
             "piece": {
               "label": "scoop",
               "grams": 30
-            }
+            },
+            "foodId": "whey-protein-chocolate"
           },
           {
             "id": 3,
             "name": "Plain Greek yogurt (0–2%)",
             "amount": 100,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "greek-yogurt-low-fat"
           }
         ]
       }
@@ -702,12 +728,6 @@
       "Creamy"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 210,
-      "protein": 31,
-      "carbs": 8,
-      "fat": 6
-    },
     "source": null,
     "ingredientSections": [
       {
@@ -718,23 +738,26 @@
             "id": 1,
             "name": "Unsweetened almond milk",
             "amount": 350,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "unsweetened-almond-milk"
           },
           {
             "id": 2,
-            "name": "Chocolate protein powder",
+            "name": "Chocolate whey protein",
             "amount": 30,
             "unit": "g",
             "piece": {
               "label": "scoop",
               "grams": 30
-            }
+            },
+            "foodId": "whey-protein-chocolate"
           },
           {
             "id": 3,
             "name": "Plain Greek yogurt (0–2%)",
             "amount": 50,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "greek-yogurt-low-fat"
           },
           {
             "id": 4,
@@ -794,12 +817,6 @@
       "Dinner"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 600,
-      "protein": 48,
-      "carbs": 61,
-      "fat": 20
-    },
     "source": "https://www.instagram.com/reel/DWeSJf7jEU4/?igsh=ZjRscTRtOG1sNWlx",
     "ingredientSections": [
       {
@@ -810,13 +827,15 @@
             "id": 1,
             "name": "Jasmine rice (dry)",
             "amount": 50,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "jasmine-rice-dry"
           },
           {
             "id": 2,
             "name": "Olive oil",
             "amount": 5,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "olive-oil"
           },
           {
             "id": 3,
@@ -826,7 +845,8 @@
             "piece": {
               "label": "tbsp",
               "grams": 15
-            }
+            },
+            "foodId": "soy-sauce"
           },
           {
             "id": 4,
@@ -836,7 +856,8 @@
             "piece": {
               "label": "tbsp",
               "grams": 15
-            }
+            },
+            "foodId": "tamari"
           }
         ]
       },
@@ -848,7 +869,8 @@
             "id": 5,
             "name": "Tuna in water, drained",
             "amount": 110,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "tuna-in-water"
           },
           {
             "id": 6,
@@ -858,7 +880,8 @@
             "piece": {
               "label": "medium",
               "grams": 300
-            }
+            },
+            "foodId": "cucumber"
           },
           {
             "id": 7,
@@ -868,13 +891,15 @@
             "piece": {
               "label": "medium",
               "grams": 200
-            }
+            },
+            "foodId": "avocado"
           },
           {
             "id": 8,
             "name": "Edamame, shelled",
             "amount": 40,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "edamame"
           }
         ]
       },
@@ -886,19 +911,22 @@
             "id": 9,
             "name": "Plain Greek yogurt (0%)",
             "amount": 40,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "greek-yogurt-low-fat"
           },
           {
             "id": 10,
             "name": "Peanut butter",
             "amount": 8,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "peanut-butter"
           },
           {
             "id": 11,
             "name": "Honey",
             "amount": 5,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "honey"
           },
           {
             "id": 12,
@@ -908,13 +936,15 @@
             "piece": {
               "label": "tbsp",
               "grams": 15
-            }
+            },
+            "foodId": "soy-sauce"
           },
           {
             "id": 13,
             "name": "Lime juice",
             "amount": 15,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "lime-juice"
           }
         ]
       },
@@ -926,7 +956,8 @@
             "id": 14,
             "name": "Sesame seeds",
             "amount": 5,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "sesame-seeds"
           },
           {
             "id": 15,
@@ -979,12 +1010,6 @@
       "Kid-Friendly"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 330,
-      "protein": 10,
-      "carbs": 22,
-      "fat": 23
-    },
     "source": "https://www.facebook.com/share/r/1DXRionzSA/",
     "ingredientSections": [
       {
@@ -999,7 +1024,8 @@
             "piece": {
               "label": "sheet",
               "grams": 275
-            }
+            },
+            "foodId": "puff-pastry"
           },
           {
             "id": 2,
@@ -1009,31 +1035,40 @@
             "piece": {
               "label": "sausage",
               "grams": 50
-            }
+            },
+            "foodId": "hot-dog-sausage"
           },
           {
             "id": 3,
             "name": "Ketchup",
             "amount": 30,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "ketchup"
           },
           {
             "id": 4,
             "name": "Mustard",
             "amount": 20,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "mustard"
           },
           {
             "id": 5,
             "name": "Egg (for egg wash)",
             "amount": 1,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "egg",
+            "piece": {
+              "label": "egg",
+              "grams": 50
+            }
           },
           {
             "id": 6,
             "name": "Sesame seeds",
             "amount": 5,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "sesame-seeds"
           }
         ]
       }
@@ -1087,12 +1122,6 @@
       "Dinner"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 450,
-      "protein": 46,
-      "carbs": 36.2,
-      "fat": 14.8
-    },
     "source": "https://www.facebook.com/share/p/1BBVzhgWEw/",
     "ingredientSections": [
       {
@@ -1103,7 +1132,8 @@
             "id": 1,
             "name": "Pasta (dry)",
             "amount": 40,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "pasta-dry"
           },
           {
             "id": 2,
@@ -1113,19 +1143,22 @@
             "piece": {
               "label": "breast",
               "grams": 150
-            }
+            },
+            "foodId": "chicken-breast"
           },
           {
             "id": 3,
             "name": "Cottage cheese",
             "amount": 80,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "cottage-cheese"
           },
           {
             "id": 4,
             "name": "Parmesan",
             "amount": 15,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "parmesan"
           },
           {
             "id": 5,
@@ -1135,13 +1168,15 @@
             "piece": {
               "label": "bag",
               "grams": 125
-            }
+            },
+            "foodId": "spinach"
           },
           {
             "id": 6,
             "name": "Pesto",
             "amount": 10,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "pesto"
           }
         ]
       }
@@ -1192,12 +1227,6 @@
       "New"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 410,
-      "protein": 38,
-      "carbs": 21,
-      "fat": 17
-    },
     "source": "https://www.facebook.com/share/r/19EH7W5ovN/",
     "ingredientSections": [
       {
@@ -1212,7 +1241,8 @@
             "piece": {
               "label": "medium",
               "grams": 170
-            }
+            },
+            "foodId": "potatoes"
           },
           {
             "id": 2,
@@ -1222,31 +1252,40 @@
             "piece": {
               "label": "breast",
               "grams": 150
-            }
+            },
+            "foodId": "chicken-breast"
           },
           {
             "id": 3,
             "name": "Rapeseed oil",
             "amount": 15,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "rapeseed-oil"
           },
           {
             "id": 4,
             "name": "Garlic cloves",
             "amount": 3,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "garlic",
+            "piece": {
+              "label": "clove",
+              "grams": 5
+            }
           },
           {
             "id": 5,
             "name": "Cream",
             "amount": 250,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "cream"
           },
           {
             "id": 6,
             "name": "Parmesan",
             "amount": 30,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "parmesan"
           },
           {
             "id": 7,
@@ -1300,12 +1339,6 @@
       "New"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 560,
-      "protein": 35,
-      "carbs": 37,
-      "fat": 31
-    },
     "source": "https://www.instagram.com/reel/DXZNUK5jK1X/?igsh=MXVjbTY3bjljYjhqcA==",
     "ingredientSections": [
       {
@@ -1320,7 +1353,8 @@
             "piece": {
               "label": "breast",
               "grams": 150
-            }
+            },
+            "foodId": "chicken-breast"
           },
           {
             "id": 2,
@@ -1330,19 +1364,30 @@
             "piece": {
               "label": "medium",
               "grams": 160
-            }
+            },
+            "foodId": "bell-pepper"
           },
           {
             "id": 3,
             "name": "Red onion",
             "amount": 1,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "red-onion",
+            "piece": {
+              "label": "medium",
+              "grams": 110
+            }
           },
           {
             "id": 4,
             "name": "Garlic cloves",
             "amount": 2,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "garlic",
+            "piece": {
+              "label": "clove",
+              "grams": 5
+            }
           },
           {
             "id": 5,
@@ -1352,7 +1397,8 @@
             "piece": {
               "label": "tbsp",
               "grams": 15
-            }
+            },
+            "foodId": "olive-oil"
           },
           {
             "id": 6,
@@ -1362,7 +1408,8 @@
             "piece": {
               "label": "tbsp",
               "grams": 15
-            }
+            },
+            "foodId": "lime-juice"
           }
         ]
       },
@@ -1374,25 +1421,37 @@
             "id": 7,
             "name": "Grated cheese",
             "amount": 80,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "grated-cheese"
           },
           {
             "id": 8,
             "name": "Avocado",
             "amount": 1,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "avocado",
+            "piece": {
+              "label": "medium",
+              "grams": 200
+            }
           },
           {
             "id": 9,
             "name": "Sour cream",
             "amount": 80,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "sour-cream"
           },
           {
             "id": 10,
             "name": "Whole grain tortillas",
             "amount": 4,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "whole-grain-tortilla",
+            "piece": {
+              "label": "tortilla",
+              "grams": 45
+            }
           },
           {
             "id": 11,
@@ -1447,12 +1506,6 @@
       "New"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 560,
-      "protein": 52,
-      "carbs": 45,
-      "fat": 18
-    },
     "source": "https://www.instagram.com/reel/DZU2GdzAl5r/?igsh=a2Ficzg4ZDFqZnk4",
     "ingredientSections": [
       {
@@ -1463,7 +1516,8 @@
             "id": 1,
             "name": "Potatoes",
             "amount": 660,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "potatoes"
           },
           {
             "id": 2,
@@ -1473,7 +1527,8 @@
             "piece": {
               "label": "tbsp",
               "grams": 15
-            }
+            },
+            "foodId": "olive-oil"
           }
         ]
       },
@@ -1489,7 +1544,8 @@
             "piece": {
               "label": "breast",
               "grams": 120
-            }
+            },
+            "foodId": "chicken-breast"
           },
           {
             "id": 4,
@@ -1505,7 +1561,8 @@
             "piece": {
               "label": "tbsp",
               "grams": 15
-            }
+            },
+            "foodId": "olive-oil"
           },
           {
             "id": 6,
@@ -1517,13 +1574,19 @@
             "id": 7,
             "name": "Light mozzarella",
             "amount": 125,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "light-mozzarella"
           },
           {
             "id": 8,
             "name": "Tomatoes",
             "amount": 3,
-            "unit": "pcs"
+            "unit": "pcs",
+            "foodId": "tomato",
+            "piece": {
+              "label": "medium",
+              "grams": 123
+            }
           },
           {
             "id": 9,
@@ -1533,7 +1596,8 @@
             "piece": {
               "label": "tbsp",
               "grams": 15
-            }
+            },
+            "foodId": "balsamic-vinegar"
           },
           {
             "id": 10,
@@ -1613,20 +1677,6 @@
       "Halloumi",
       "Egg"
     ],
-    "nutritionByVariant": {
-      "Halloumi": {
-        "calories": 470,
-        "protein": 32,
-        "carbs": 45,
-        "fat": 18
-      },
-      "Egg": {
-        "calories": 465,
-        "protein": 35,
-        "carbs": 45,
-        "fat": 17
-      }
-    },
     "source": null,
     "sources": [
       {
@@ -1647,13 +1697,15 @@
             "id": 1,
             "name": "Black beluga lentils",
             "amount": 100,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "black-beluga-lentils"
           },
           {
             "id": 2,
             "name": "Tomato paste",
             "amount": 45,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "tomato-paste"
           },
           {
             "id": 3,
@@ -1663,7 +1715,8 @@
             "piece": {
               "label": "tsp",
               "grams": 5
-            }
+            },
+            "foodId": "balsamic-vinegar"
           }
         ]
       },
@@ -1679,7 +1732,8 @@
             "piece": {
               "label": "medium",
               "grams": 250
-            }
+            },
+            "foodId": "zucchini"
           },
           {
             "id": 5,
@@ -1689,7 +1743,8 @@
             "piece": {
               "label": "medium",
               "grams": 123
-            }
+            },
+            "foodId": "tomato"
           },
           {
             "id": 6,
@@ -1699,7 +1754,8 @@
             "piece": {
               "label": "tsp",
               "grams": 5
-            }
+            },
+            "foodId": "olive-oil"
           },
           {
             "id": 7,
@@ -1717,13 +1773,15 @@
             "id": 8,
             "name": "Cottage cheese",
             "amount": 60,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "cottage-cheese"
           },
           {
             "id": 9,
             "name": "Honey",
             "amount": 10,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "honey"
           },
           {
             "id": 10,
@@ -1736,7 +1794,8 @@
             "name": "Halloumi",
             "amount": 50,
             "unit": "g",
-            "variant": "Halloumi"
+            "variant": "Halloumi",
+            "foodId": "halloumi"
           },
           {
             "id": 12,
@@ -1747,7 +1806,8 @@
               "label": "egg",
               "grams": 50
             },
-            "variant": "Egg"
+            "variant": "Egg",
+            "foodId": "egg"
           }
         ]
       }
@@ -1806,26 +1866,6 @@
       "Almond Butter",
       "Hazelnut Butter"
     ],
-    "nutritionByVariant": {
-      "Peanut Butter": {
-        "calories": 430,
-        "protein": 47,
-        "carbs": 47,
-        "fat": 8
-      },
-      "Almond Butter": {
-        "calories": 431,
-        "protein": 47,
-        "carbs": 47,
-        "fat": 8
-      },
-      "Hazelnut Butter": {
-        "calories": 433,
-        "protein": 47,
-        "carbs": 47,
-        "fat": 9
-      }
-    },
     "nutritionNote": "Includes ~56 kcal (15g) from collagen protein. Collagen isn't a complete protein and the body doesn't use it the same way as whey or animal protein, so it may not count fully toward your protein target.",
     "source": null,
     "ingredientSections": [
@@ -1837,64 +1877,74 @@
             "id": 1,
             "name": "Oats",
             "amount": 42,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "oats"
           },
           {
             "id": 2,
             "name": "Almond milk",
             "amount": 90,
-            "unit": "ml"
+            "unit": "ml",
+            "foodId": "unsweetened-almond-milk"
           },
           {
             "id": 3,
             "name": "Magerquark (low-fat quark)",
             "amount": 125,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "magerquark"
           },
           {
             "id": 4,
             "name": "Chia seeds",
             "amount": 1,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "chia-seeds"
           },
           {
             "id": 5,
             "name": "Chocolate whey protein",
             "amount": 10,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "whey-protein-chocolate"
           },
           {
             "id": 6,
             "name": "Collagen protein",
             "amount": 15,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "collagen-protein"
           },
           {
             "id": 7,
             "name": "Peanut butter",
             "amount": 5,
             "unit": "g",
-            "variant": "Peanut Butter"
+            "variant": "Peanut Butter",
+            "foodId": "peanut-butter"
           },
           {
             "id": 8,
             "name": "Almond butter",
             "amount": 5,
             "unit": "g",
-            "variant": "Almond Butter"
+            "variant": "Almond Butter",
+            "foodId": "almond-butter"
           },
           {
             "id": 9,
             "name": "Hazelnut butter",
             "amount": 5,
             "unit": "g",
-            "variant": "Hazelnut Butter"
+            "variant": "Hazelnut Butter",
+            "foodId": "hazelnut-butter"
           },
           {
             "id": 10,
             "name": "Fruit (apple or berries)",
             "amount": 80,
-            "unit": "g"
+            "unit": "g",
+            "foodId": "apple"
           }
         ]
       }

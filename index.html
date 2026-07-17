@@ -35,6 +35,53 @@ const fmtM=m=>m===0?"None":m<60?m+" min":Math.floor(m/60)+"h"+(m%60?" "+m%60+"m"
 const fmtCD=s=>Math.floor(s/60)+":"+(s%60<10?"0":"")+s%60;
 const getSec=r=>r.ingredientSections||[{id:1,title:"",ingredients:r.ingredients||[]}];
 
+// Nutrition contribution of one ingredient line, using its linked product/food entry.
+// Returns null when there's nothing to add (no foodId, unknown foodId, or a pcs-unit
+// ingredient with no piece.grams to convert it to grams).
+function foodContribution(ing,food){
+  if(!food||!food.per100)return null;
+  let factor;
+  if(ing.unit==="pcs"){
+    if(!ing.piece||!ing.piece.grams)return null;
+    factor=(ing.amount*ing.piece.grams)/100;
+  }else{
+    factor=ing.amount/100;
+  }
+  const out={};
+  for(const k in food.per100)out[k]=food.per100[k]*factor;
+  return out;
+}
+
+// Sums nutrition across a recipe's ingredients (respecting the selected variant) using
+// the products/foods catalog, then divides by baseServings for a per-serving figure.
+// Since this reads amounts live, editing an ingredient's amount in recipes.json
+// recalculates nutrition automatically -- nothing is hard-coded.
+function computeNutrition(recipe,foodsById,variant){
+  const totals={calories:0,protein:0,carbs:0,fat:0};
+  let real=0,total=0;
+  getSec(recipe).forEach(sec=>sec.ingredients.forEach(ing=>{
+    if(ing.variant&&ing.variant!==variant)return;
+    if(!ing.foodId)return;
+    const food=foodsById[ing.foodId];
+    const c=foodContribution(ing,food);
+    if(!c)return;
+    total++;
+    if(food.brand)real++;
+    for(const k in totals)totals[k]+=c[k]||0;
+  }));
+  const servings=recipe.baseServings||1;
+  const values={};
+  for(const k in totals)values[k]=totals[k]/servings;
+  return{values,real,total};
+}
+
+function nutritionProvenance(nutr){
+  if(nutr.total===0)return null;
+  if(nutr.real===0)return"Estimated from generic nutrition data";
+  if(nutr.real===nutr.total)return"Calculated from your real product data";
+  return"Calculated from real product data ("+nutr.real+"/"+nutr.total+" ingredients) + generic estimates for the rest";
+}
+
 // Shopping hint: convert a scaled weight into whole-ish pieces, rounded to the nearest half.
 // Returns null when the amount is too small to be worth expressing as pieces.
 function pieceHint(scaledAmount,piece){
@@ -135,14 +182,16 @@ function ListView({recipes,onSelect}){
   );
 }
 
-function DetailView({recipe,onBack}){
+function DetailView({recipe,foodsById,onBack}){
   const[srv,setSrv]=useState(recipe.baseServings);
   const[variant,setVariant]=useState(recipe.variants?recipe.variants[0]:null);
   const matchesVariant=x=>!x.variant||x.variant===variant;
   const secs=getSec(recipe).map(sec=>({...sec,ingredients:sec.ingredients.filter(matchesVariant)}));
   const steps=recipe.steps.filter(matchesVariant);
-  const nutrition=recipe.nutritionByVariant?recipe.nutritionByVariant[variant]:recipe.nutrition;
-  const hasNutr=nutrition&&Object.values(nutrition).some(v=>v!=null&&v>0);
+  const nutr=computeNutrition(recipe,foodsById,variant);
+  const nutrition=nutr.values;
+  const hasNutr=nutr.total>0;
+  const provenance=nutritionProvenance(nutr);
   const statBox=(label,val)=>E("div",{style:{textAlign:"center",padding:"0 12px"}},
     E("div",{style:{fontSize:10,textTransform:"uppercase",letterSpacing:".9px",color:MUT2,marginBottom:8,fontWeight:500}},label),
     E("div",{style:{fontSize:16,fontWeight:600,color:G900}},val));
@@ -226,7 +275,8 @@ function DetailView({recipe,onBack}){
               E("div",{style:{fontSize:11,color:MUT2,marginTop:3}},unit));
           })
         ),
-        recipe.nutritionNote&&E("p",{style:{fontSize:11,color:MUT2,marginTop:12,lineHeight:1.5}},recipe.nutritionNote)
+        provenance&&E("p",{style:{fontSize:11,color:MUT2,marginTop:12,lineHeight:1.5}},provenance),
+        recipe.nutritionNote&&E("p",{style:{fontSize:11,color:MUT2,marginTop:6,lineHeight:1.5}},recipe.nutritionNote)
       ),
 recipe.sources?E("div",{style:{textAlign:"center",fontSize:11,color:MUT2,marginBottom:20}},
         recipe.sources.map((s,i)=>E("p",{key:i,style:{margin:"2px 0"}},
@@ -245,38 +295,51 @@ function Notice({title,body,detail}){
     detail&&E("pre",{style:{marginTop:16,padding:"12px 14px",background:"#FBEAEA",border:"0.5px solid #E9B4B4",borderRadius:10,fontSize:12,color:"#8A2222",whiteSpace:"pre-wrap",wordBreak:"break-word"}},detail));
 }
 
+// Fetches and JSON-parses a data file, rejecting with a message a non-technical
+// user can act on (HTTP error, bad JSON with a line number, or wrong top-level shape).
+function loadJsonFile(name){
+  return fetch(name,{cache:"no-store"})
+    .then(r=>{
+      if(!r.ok)throw new Error("Could not load "+name+" — the server answered HTTP "+r.status+". Is the file next to index.html in the repo, spelled exactly '"+name+"'?");
+      return r.text();
+    })
+    .then(text=>{
+      let data;
+      try{ data=JSON.parse(text); }
+      catch(e){
+        const line=lineFromPos(text,e.message);
+        throw new Error(name+" is not valid JSON"+(line?" — look around line "+line:"")+".\n\nUsual cause: a missing or extra comma, or a quote that was never closed.\n\nOriginal message: "+e.message);
+      }
+      if(!Array.isArray(data))throw new Error(name+" loaded, but it is not a list. The file must start with [ and end with ].");
+      return data;
+    });
+}
+
 function App(){
   const[recipes,setRecipes]=useState(null);
+  const[foodsById,setFoodsById]=useState(null);
   const[err,setErr]=useState(null);
   const[sel,setSel]=useState(null);
   useEffect(()=>{
-    fetch("recipes.json",{cache:"no-store"})
-      .then(r=>{
-        if(!r.ok)throw new Error("Could not load recipes.json — the server answered HTTP "+r.status+". Is the file next to index.html in the repo, spelled exactly 'recipes.json'?");
-        return r.text();
-      })
-      .then(text=>{
-        let data;
-        try{ data=JSON.parse(text); }
-        catch(e){
-          const line=lineFromPos(text,e.message);
-          throw new Error("recipes.json is not valid JSON"+(line?" — look around line "+line:"")+".\n\nUsual cause: a missing or extra comma, or a quote that was never closed.\n\nOriginal message: "+e.message);
-        }
-        if(!Array.isArray(data))throw new Error("recipes.json loaded, but it is not a list. The file must start with [ and end with ].");
-        setRecipes(data);
+    Promise.all([loadJsonFile("recipes.json"),loadJsonFile("products.json")])
+      .then(([recipesData,productsData])=>{
+        const byId={};
+        productsData.forEach(p=>{byId[p.id]=p;});
+        setFoodsById(byId);
+        setRecipes(recipesData);
       })
       .catch(e=>setErr(e.message));
   },[]);
 
   if(err)return E("div",{style:{background:BG,minHeight:"100vh"}},
-    E(Notice,{title:"The recipes could not be loaded",body:"The app is fine — the data file has a problem. Fix recipes.json in GitHub, commit, and this page will work again once Netlify redeploys.",detail:err}));
+    E(Notice,{title:"The recipes could not be loaded",body:"The app is fine — a data file has a problem. Fix it in GitHub, commit, and this page will work again once Netlify redeploys.",detail:err}));
 
   if(!recipes)return E("div",{style:{background:BG,minHeight:"100vh"}},
     E(Notice,{title:"My Recipe Book",body:"Loading recipes…"}));
 
   return E("div",{style:{background:BG,minHeight:"100vh"}},
     sel
-      ?E(DetailView,{recipe:sel,onBack:()=>setSel(null)})
+      ?E(DetailView,{recipe:sel,foodsById,onBack:()=>setSel(null)})
       :E(ListView,{recipes,onSelect:setSel})
   );
 }
