@@ -667,14 +667,14 @@
           },
           {
             "id": 2,
-            "name": "Chocolate protein powder",
+            "name": "Chocolate whey protein",
             "amount": 30,
             "unit": "g",
             "piece": {
               "label": "scoop",
               "grams": 30
             },
-            "foodId": "protein-powder-chocolate"
+            "foodId": "whey-protein-chocolate"
           },
           {
             "id": 3,
@@ -743,14 +743,14 @@
           },
           {
             "id": 2,
-            "name": "Chocolate protein powder",
+            "name": "Chocolate whey protein",
             "amount": 30,
             "unit": "g",
             "piece": {
               "label": "scoop",
               "grams": 30
             },
-            "foodId": "protein-powder-chocolate"
+            "foodId": "whey-protein-chocolate"
           },
           {
             "id": 3,
@@ -1906,7 +1906,7 @@
             "name": "Chocolate whey protein",
             "amount": 10,
             "unit": "g",
-            "foodId": "protein-powder-chocolate"
+            "foodId": "whey-protein-chocolate"
           },
           {
             "id": 6,

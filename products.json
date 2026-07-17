@@ -352,14 +352,14 @@
     }
   },
   {
-    "id": "protein-powder-chocolate",
-    "name": "Chocolate protein powder",
-    "brand": null,
+    "id": "whey-protein-chocolate",
+    "name": "Chocolate whey protein",
+    "brand": "Myprotein",
     "per100": {
-      "calories": 380,
-      "protein": 75,
-      "carbs": 8,
-      "fat": 5
+      "calories": 372,
+      "protein": 70,
+      "carbs": 6.9,
+      "fat": 6.5
     }
   },
   {
@@ -376,12 +376,12 @@
   {
     "id": "unsweetened-almond-milk",
     "name": "Unsweetened almond milk",
-    "brand": null,
+    "brand": "MyWay",
     "per100": {
-      "calories": 13,
-      "protein": 0.4,
-      "carbs": 0.3,
-      "fat": 1.1
+      "calories": 15,
+      "protein": 0.6,
+      "carbs": 0.5,
+      "fat": 1.3
     }
   },
   {
@@ -453,12 +453,12 @@
   {
     "id": "peanut-butter",
     "name": "Peanut butter",
-    "brand": null,
+    "brand": "KoRo",
     "per100": {
-      "calories": 588,
-      "protein": 25,
-      "carbs": 20,
-      "fat": 50
+      "calories": 619,
+      "protein": 29,
+      "carbs": 9,
+      "fat": 51
     }
   },
   {
@@ -651,42 +651,42 @@
   {
     "id": "oats",
     "name": "Oats",
-    "brand": null,
+    "brand": "Golden Bridge",
     "per100": {
-      "calories": 379,
-      "protein": 13.5,
-      "carbs": 67.7,
-      "fat": 6.5
+      "calories": 375,
+      "protein": 14,
+      "carbs": 59,
+      "fat": 7
     }
   },
   {
     "id": "magerquark",
     "name": "Magerquark (low-fat quark)",
-    "brand": null,
+    "brand": "Bio Magerquark",
     "per100": {
-      "calories": 67,
-      "protein": 12,
-      "carbs": 4,
-      "fat": 0.2
+      "calories": 53,
+      "protein": 9.5,
+      "carbs": 3.3,
+      "fat": 0.5
     }
   },
   {
     "id": "chia-seeds",
     "name": "Chia seeds",
-    "brand": null,
+    "brand": "BioNatur",
     "per100": {
-      "calories": 486,
-      "protein": 17,
-      "carbs": 42,
-      "fat": 31
+      "calories": 457,
+      "protein": 22,
+      "carbs": 1.8,
+      "fat": 33
     }
   },
   {
     "id": "collagen-protein",
     "name": "Collagen protein",
-    "brand": null,
+    "brand": "Myprotein",
     "per100": {
-      "calories": 370,
+      "calories": 360,
       "protein": 90,
       "carbs": 0,
       "fat": 0
@@ -695,23 +695,23 @@
   {
     "id": "almond-butter",
     "name": "Almond butter",
-    "brand": null,
+    "brand": "KoRo",
     "per100": {
-      "calories": 614,
+      "calories": 610,
       "protein": 21,
-      "carbs": 19,
-      "fat": 56
+      "carbs": 10,
+      "fat": 54
     }
   },
   {
     "id": "hazelnut-butter",
     "name": "Hazelnut butter",
-    "brand": null,
+    "brand": "KoRo",
     "per100": {
-      "calories": 646,
+      "calories": 695,
       "protein": 15,
-      "carbs": 17,
-      "fat": 61
+      "carbs": 5.4,
+      "fat": 67
     }
   }
 ]
