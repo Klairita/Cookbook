@@ -1058,5 +1058,108 @@
         "timerMinutes": null
       }
     ]
+  },
+  {
+    "id": 12,
+    "name": "Creamy Pasta with Chicken",
+    "category": "Healthy",
+    "description": "High-protein creamy chicken pasta with a cottage cheese, parmesan and pesto sauce and wilted spinach — perfect for a filling lunch or dinner",
+    "baseServings": 1,
+    "prepTime": 5,
+    "cookTime": 15,
+    "tags": [
+      "Healthy",
+      "High Protein",
+      "Quick",
+      "Lunch",
+      "Dinner"
+    ],
+    "photo": null,
+    "nutrition": {
+      "calories": 450,
+      "protein": 46,
+      "carbs": 36.2,
+      "fat": 14.8
+    },
+    "source": "https://www.facebook.com/share/p/1BBVzhgWEw/",
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Pasta (dry)",
+            "amount": 40,
+            "unit": "g"
+          },
+          {
+            "id": 2,
+            "name": "Chicken breast",
+            "amount": 100,
+            "unit": "g",
+            "piece": {
+              "label": "breast",
+              "grams": 150
+            }
+          },
+          {
+            "id": 3,
+            "name": "Cottage cheese",
+            "amount": 80,
+            "unit": "g"
+          },
+          {
+            "id": 4,
+            "name": "Parmesan",
+            "amount": 15,
+            "unit": "g"
+          },
+          {
+            "id": 5,
+            "name": "Spinach",
+            "amount": 100,
+            "unit": "g",
+            "piece": {
+              "label": "bag",
+              "grams": 125
+            }
+          },
+          {
+            "id": 6,
+            "name": "Pesto",
+            "amount": 10,
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Cook the pasta in salted water until al dente. Drain, reserving a splash of the cooking water.",
+        "timerMinutes": 10
+      },
+      {
+        "id": 2,
+        "text": "Meanwhile, season the chicken breast and cook in a pan until golden and cooked through, then slice.",
+        "timerMinutes": 10
+      },
+      {
+        "id": 3,
+        "text": "Blend the cottage cheese, parmesan and pesto until smooth and creamy, loosening with a splash of the reserved pasta water if needed.",
+        "timerMinutes": null
+      },
+      {
+        "id": 4,
+        "text": "Wilt the spinach in the same pan used for the chicken.",
+        "timerMinutes": 2
+      },
+      {
+        "id": 5,
+        "text": "Toss the cooked pasta with the creamy sauce and wilted spinach, then top with the sliced chicken.",
+        "timerMinutes": null
+      }
+    ]
   }
 ]
