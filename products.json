@@ -178,12 +178,12 @@
   {
     "id": "parmesan",
     "name": "Parmesan",
-    "brand": null,
+    "brand": "Primis (ALDI)",
     "per100": {
-      "calories": 392,
-      "protein": 35,
-      "carbs": 3.2,
-      "fat": 26
+      "calories": 402,
+      "protein": 32,
+      "carbs": 0,
+      "fat": 30
     }
   },
   {
@@ -222,12 +222,12 @@
   {
     "id": "feta",
     "name": "Feta",
-    "brand": null,
+    "brand": "Lyttos (Hofer)",
     "per100": {
-      "calories": 264,
-      "protein": 14,
-      "carbs": 4,
-      "fat": 21
+      "calories": 290,
+      "protein": 16,
+      "carbs": 0.5,
+      "fat": 25
     }
   },
   {
@@ -288,12 +288,12 @@
   {
     "id": "dijon-mustard",
     "name": "Dijon mustard",
-    "brand": null,
+    "brand": "NaturaPlan",
     "per100": {
-      "calories": 70,
-      "protein": 4.4,
-      "carbs": 5,
-      "fat": 4
+      "calories": 134,
+      "protein": 6.1,
+      "carbs": 7.7,
+      "fat": 8.8
     }
   },
   {
@@ -343,12 +343,12 @@
   {
     "id": "unsweetened-soy-milk",
     "name": "Unsweetened soy milk",
-    "brand": null,
+    "brand": "MyWay",
     "per100": {
-      "calories": 33,
-      "protein": 3.3,
-      "carbs": 0.5,
-      "fat": 1.8
+      "calories": 41,
+      "protein": 3.0,
+      "carbs": 3.2,
+      "fat": 1.6
     }
   },
   {
@@ -530,12 +530,12 @@
   {
     "id": "cottage-cheese",
     "name": "Cottage cheese",
-    "brand": null,
+    "brand": "Milsani",
     "per100": {
-      "calories": 98,
+      "calories": 93,
       "protein": 11,
-      "carbs": 3.4,
-      "fat": 4.3
+      "carbs": 2.5,
+      "fat": 4.5
     }
   },
   {
