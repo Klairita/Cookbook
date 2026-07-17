@@ -22,7 +22,7 @@
       "carbs": 70,
       "fat": 17
     },
-    "source": null,
+    "source": "https://www.instagram.com/reel/DT8WJDgjHRk/?igsh=MTY0ZnhwMzA4dDV0Nw==",
     "ingredientSections": [
       {
         "id": 1,
@@ -143,7 +143,7 @@
       "carbs": 38,
       "fat": 10
     },
-    "source": null,
+    "source": "https://www.instagram.com/reel/DXmVpNdDAz8/?igsh=a3FoZWpwaWs3ZzQ1",
     "ingredientSections": [
       {
         "id": 1,
@@ -304,7 +304,7 @@
       "carbs": 42,
       "fat": 18
     },
-    "source": null,
+    "source": "https://www.instagram.com/reel/DVWWZ2nDFek/?igsh=MWFnYW0wcnp0d2Ywcw==",
     "ingredientSections": [
       {
         "id": 1,
@@ -446,7 +446,7 @@
     "id": 7,
     "name": "Honey Mustard Shredded Chicken Bowl",
     "category": "Meal Prep",
-    "description": "Slow-baked honey mustard pulled chicken with fluffy quinoa and vibrant mango salsa",
+    "description": "Slow-baked honey mustard pulled chicken with fluffy quinoa and vibrant apple salsa",
     "baseServings": 1,
     "prepTime": 15,
     "cookTime": 140,
@@ -459,12 +459,12 @@
     ],
     "photo": null,
     "nutrition": {
-      "calories": 480,
-      "protein": 42,
-      "carbs": 52,
-      "fat": 10
+      "calories": 590,
+      "protein": 52,
+      "carbs": 64,
+      "fat": 12
     },
-    "source": null,
+    "source": "https://www.instagram.com/reel/DV5egOIDNjG/?igsh=MWF3dm9kMDIzcGZiMw==",
     "ingredientSections": [
       {
         "id": 1,
@@ -520,16 +520,16 @@
       },
       {
         "id": 3,
-        "title": "Mango salsa",
+        "title": "Apple salsa",
         "ingredients": [
           {
             "id": 7,
-            "name": "Mango",
+            "name": "Granny Smith apple",
             "amount": 80,
             "unit": "g",
             "piece": {
               "label": "medium",
-              "grams": 300
+              "grams": 180
             }
           },
           {
@@ -600,12 +600,12 @@
       },
       {
         "id": 5,
-        "text": "Dice mango, cucumber, bell pepper and red onion into small pieces. Toss with olive oil, lime juice, chili flakes, salt and cilantro.",
+        "text": "Dice apple, cucumber, bell pepper and red onion into small pieces. Toss with olive oil, lime juice, chili flakes, salt and cilantro.",
         "timerMinutes": null
       },
       {
         "id": 6,
-        "text": "Serve shredded chicken over quinoa with mango salsa on the side.",
+        "text": "Serve shredded chicken over quinoa with apple salsa on the side.",
         "timerMinutes": null
       }
     ]
@@ -822,13 +822,21 @@
             "id": 3,
             "name": "Soy sauce",
             "amount": 7.5,
-            "unit": "ml"
+            "unit": "ml",
+            "piece": {
+              "label": "tbsp",
+              "grams": 15
+            }
           },
           {
             "id": 4,
             "name": "Tamari",
             "amount": 15,
-            "unit": "ml"
+            "unit": "ml",
+            "piece": {
+              "label": "tbsp",
+              "grams": 15
+            }
           }
         ]
       },
@@ -896,7 +904,11 @@
             "id": 12,
             "name": "Soy sauce",
             "amount": 7.5,
-            "unit": "ml"
+            "unit": "ml",
+            "piece": {
+              "label": "tbsp",
+              "grams": 15
+            }
           },
           {
             "id": 13,
@@ -1336,13 +1348,21 @@
             "id": 5,
             "name": "Olive oil",
             "amount": 30,
-            "unit": "ml"
+            "unit": "ml",
+            "piece": {
+              "label": "tbsp",
+              "grams": 15
+            }
           },
           {
             "id": 6,
             "name": "Lime juice",
             "amount": 30,
-            "unit": "ml"
+            "unit": "ml",
+            "piece": {
+              "label": "tbsp",
+              "grams": 15
+            }
           }
         ]
       },
@@ -1449,7 +1469,11 @@
             "id": 2,
             "name": "Olive oil",
             "amount": 15,
-            "unit": "ml"
+            "unit": "ml",
+            "piece": {
+              "label": "tbsp",
+              "grams": 15
+            }
           }
         ]
       },
@@ -1477,7 +1501,11 @@
             "id": 5,
             "name": "Olive oil",
             "amount": 15,
-            "unit": "ml"
+            "unit": "ml",
+            "piece": {
+              "label": "tbsp",
+              "grams": 15
+            }
           },
           {
             "id": 6,
@@ -1501,7 +1529,11 @@
             "id": 9,
             "name": "Balsamic vinegar",
             "amount": 30,
-            "unit": "ml"
+            "unit": "ml",
+            "piece": {
+              "label": "tbsp",
+              "grams": 15
+            }
           },
           {
             "id": 10,
@@ -1626,8 +1658,12 @@
           {
             "id": 3,
             "name": "Balsamic vinegar",
-            "amount": 12,
-            "unit": "ml"
+            "amount": 12.5,
+            "unit": "ml",
+            "piece": {
+              "label": "tsp",
+              "grams": 5
+            }
           }
         ]
       },
@@ -1659,7 +1695,11 @@
             "id": 6,
             "name": "Olive oil",
             "amount": 5,
-            "unit": "ml"
+            "unit": "ml",
+            "piece": {
+              "label": "tsp",
+              "grams": 5
+            }
           },
           {
             "id": 7,
@@ -1743,6 +1783,146 @@
       {
         "id": 6,
         "text": "Serve the lentils with the roasted vegetables and the cottage cheese, sweetened with honey and topped with chili flakes or freshly ground pepper, alongside the halloumi or egg.",
+        "timerMinutes": null
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Protein Breakfast Oatmeal",
+    "category": "Healthy",
+    "description": "Microwave oats with quark, chocolate whey and collagen protein, nut butter and fruit — a quick high-protein breakfast",
+    "baseServings": 1,
+    "prepTime": 5,
+    "cookTime": 1,
+    "tags": [
+      "Breakfast",
+      "High Protein",
+      "Quick"
+    ],
+    "photo": null,
+    "variants": [
+      "Peanut Butter",
+      "Almond Butter",
+      "Hazelnut Butter"
+    ],
+    "nutritionByVariant": {
+      "Peanut Butter": {
+        "calories": 430,
+        "protein": 47,
+        "carbs": 47,
+        "fat": 8
+      },
+      "Almond Butter": {
+        "calories": 431,
+        "protein": 47,
+        "carbs": 47,
+        "fat": 8
+      },
+      "Hazelnut Butter": {
+        "calories": 433,
+        "protein": 47,
+        "carbs": 47,
+        "fat": 9
+      }
+    },
+    "nutritionNote": "Includes ~56 kcal (15g) from collagen protein. Collagen isn't a complete protein and the body doesn't use it the same way as whey or animal protein, so it may not count fully toward your protein target.",
+    "source": null,
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Oats",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "id": 2,
+            "name": "Almond milk",
+            "amount": 90,
+            "unit": "ml"
+          },
+          {
+            "id": 3,
+            "name": "Magerquark (low-fat quark)",
+            "amount": 125,
+            "unit": "g"
+          },
+          {
+            "id": 4,
+            "name": "Chia seeds",
+            "amount": 1,
+            "unit": "g"
+          },
+          {
+            "id": 5,
+            "name": "Chocolate whey protein",
+            "amount": 10,
+            "unit": "g"
+          },
+          {
+            "id": 6,
+            "name": "Collagen protein",
+            "amount": 15,
+            "unit": "g"
+          },
+          {
+            "id": 7,
+            "name": "Peanut butter",
+            "amount": 5,
+            "unit": "g",
+            "variant": "Peanut Butter"
+          },
+          {
+            "id": 8,
+            "name": "Almond butter",
+            "amount": 5,
+            "unit": "g",
+            "variant": "Almond Butter"
+          },
+          {
+            "id": 9,
+            "name": "Hazelnut butter",
+            "amount": 5,
+            "unit": "g",
+            "variant": "Hazelnut Butter"
+          },
+          {
+            "id": 10,
+            "name": "Fruit (apple or berries)",
+            "amount": 80,
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Mix the oats with the chocolate whey and collagen protein powders.",
+        "timerMinutes": null
+      },
+      {
+        "id": 2,
+        "text": "Add the almond milk and microwave for 1 minute.",
+        "timerMinutes": 1
+      },
+      {
+        "id": 3,
+        "text": "Stir in the chia seeds and nut butter.",
+        "timerMinutes": null
+      },
+      {
+        "id": 4,
+        "text": "Add the quark and mix.",
+        "timerMinutes": null
+      },
+      {
+        "id": 5,
+        "text": "Top with fruit.",
         "timerMinutes": null
       }
     ]
