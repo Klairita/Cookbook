@@ -137,8 +137,12 @@ function ListView({recipes,onSelect}){
 
 function DetailView({recipe,onBack}){
   const[srv,setSrv]=useState(recipe.baseServings);
-  const secs=getSec(recipe);
-  const hasNutr=recipe.nutrition&&Object.values(recipe.nutrition).some(v=>v!=null&&v>0);
+  const[variant,setVariant]=useState(recipe.variants?recipe.variants[0]:null);
+  const matchesVariant=x=>!x.variant||x.variant===variant;
+  const secs=getSec(recipe).map(sec=>({...sec,ingredients:sec.ingredients.filter(matchesVariant)}));
+  const steps=recipe.steps.filter(matchesVariant);
+  const nutrition=recipe.nutritionByVariant?recipe.nutritionByVariant[variant]:recipe.nutrition;
+  const hasNutr=nutrition&&Object.values(nutrition).some(v=>v!=null&&v>0);
   const statBox=(label,val)=>E("div",{style:{textAlign:"center",padding:"0 12px"}},
     E("div",{style:{fontSize:10,textTransform:"uppercase",letterSpacing:".9px",color:MUT2,marginBottom:8,fontWeight:500}},label),
     E("div",{style:{fontSize:16,fontWeight:600,color:G900}},val));
@@ -158,6 +162,12 @@ function DetailView({recipe,onBack}){
         ),
         recipe.photo&&E("img",{src:recipe.photo,alt:recipe.name,
           style:{width:180,height:145,objectFit:"cover",borderRadius:14,display:"block",flexShrink:0,boxShadow:"0 2px 14px rgba(0,0,0,.12)"}})
+      ),
+      recipe.variants&&E("div",{style:{display:"flex",gap:6,background:STATS,borderRadius:12,padding:4,marginBottom:14}},
+        recipe.variants.map(v=>E("button",{key:v,onClick:()=>setVariant(v),
+          style:{flex:1,padding:"9px 0",borderRadius:9,border:"none",cursor:"pointer",fontSize:13,fontWeight:600,
+            background:v===variant?CARD:"transparent",color:v===variant?G700:MUT,
+            boxShadow:v===variant?"0 1px 4px rgba(0,0,0,.08)":"none"}},v))
       ),
       E("div",{style:{background:STATS,borderRadius:14,padding:"16px 20px",marginBottom:14,
         display:"grid",gridTemplateColumns:"auto 1fr 1fr 1fr",gap:"0",alignItems:"center"}},
@@ -194,7 +204,7 @@ function DetailView({recipe,onBack}){
       ),
       E("div",{style:sc},
         E("h2",{style:{fontFamily:SERIF,fontSize:19,fontWeight:700,color:G900,marginBottom:16}},"Instructions"),
-        recipe.steps.map((step,i)=>E("div",{key:step.id,style:{display:"flex",gap:14,marginBottom:i<recipe.steps.length-1?"1.5rem":0}},
+        steps.map((step,i)=>E("div",{key:step.id,style:{display:"flex",gap:14,marginBottom:i<steps.length-1?"1.5rem":0}},
           E("div",{style:{width:26,height:26,minWidth:26,borderRadius:"50%",background:G100,color:G700,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:700,marginTop:1}},i+1),
           E("div",{style:{flex:1}},
             E("p",{style:{fontSize:14,lineHeight:1.75,color:G900,margin:0}},step.text),
@@ -209,15 +219,19 @@ function DetailView({recipe,onBack}){
            {label:"Carbs",key:"carbs",unit:"g",color:"#8A5200"},
            {label:"Fat",key:"fat",unit:"g",color:"#6B3A8A"}
           ].map(({label,key,unit,color})=>{
-            if(!recipe.nutrition[key])return null;
+            if(!nutrition[key])return null;
             return E("div",{key,style:{background:BG,borderRadius:10,padding:"14px 10px",textAlign:"center"}},
               E("div",{style:{fontSize:10,textTransform:"uppercase",letterSpacing:".7px",color:MUT2,marginBottom:5,fontWeight:500}},label),
-              E("div",{style:{fontSize:22,fontWeight:700,color,lineHeight:1}},Math.round(recipe.nutrition[key])),
+              E("div",{style:{fontSize:22,fontWeight:700,color,lineHeight:1}},Math.round(nutrition[key])),
               E("div",{style:{fontSize:11,color:MUT2,marginTop:3}},unit));
           })
         )
       ),
-      recipe.source&&E("p",{style:{textAlign:"center",fontSize:11,color:MUT2,marginBottom:20}},
+recipe.sources?E("div",{style:{textAlign:"center",fontSize:11,color:MUT2,marginBottom:20}},
+        recipe.sources.map((s,i)=>E("p",{key:i,style:{margin:"2px 0"}},
+          "Source"+(s.label?" ("+s.label+")":"")+": ",
+          E("a",{href:s.url,target:"_blank",rel:"noopener noreferrer",style:{color:MUT2}},s.url)))
+      ):recipe.source&&E("p",{style:{textAlign:"center",fontSize:11,color:MUT2,marginBottom:20}},
         "Source: ",E("a",{href:recipe.source,target:"_blank",rel:"noopener noreferrer",style:{color:MUT2}},recipe.source))
     )
   );

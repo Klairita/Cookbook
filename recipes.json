@@ -1559,5 +1559,192 @@
         "timerMinutes": null
       }
     ]
+  },
+  {
+    "id": 16,
+    "name": "Black Beluga Lentils with Egg or Halloumi",
+    "category": "Healthy",
+    "description": "Black beluga lentils in a tomato-balsamic sauce with roasted vegetables, honeyed cottage cheese, and your choice of halloumi or egg — great warm or cold, perfect for meal prep",
+    "baseServings": 2,
+    "prepTime": 10,
+    "cookTime": 25,
+    "tags": [
+      "Healthy",
+      "Vegetarian",
+      "High Protein",
+      "Lunch",
+      "Dinner",
+      "New"
+    ],
+    "photo": null,
+    "variants": [
+      "Halloumi",
+      "Egg"
+    ],
+    "nutritionByVariant": {
+      "Halloumi": {
+        "calories": 470,
+        "protein": 32,
+        "carbs": 45,
+        "fat": 18
+      },
+      "Egg": {
+        "calories": 465,
+        "protein": 35,
+        "carbs": 45,
+        "fat": 17
+      }
+    },
+    "source": null,
+    "sources": [
+      {
+        "label": "Halloumi",
+        "url": "https://www.instagram.com/reel/Da2WKEegMd8/?igsh=MWt6eHA5cnh5cGVpaA=="
+      },
+      {
+        "label": "Egg",
+        "url": "https://www.instagram.com/reel/DOMEmw_jBUm/?igsh=ajF6cXpjczV3eTBt"
+      }
+    ],
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "Lentils",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Black beluga lentils",
+            "amount": 100,
+            "unit": "g"
+          },
+          {
+            "id": 2,
+            "name": "Tomato paste",
+            "amount": 45,
+            "unit": "g"
+          },
+          {
+            "id": 3,
+            "name": "Balsamic vinegar",
+            "amount": 12,
+            "unit": "ml"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Roasted Vegetables",
+        "ingredients": [
+          {
+            "id": 4,
+            "name": "Zucchini",
+            "amount": 150,
+            "unit": "g",
+            "piece": {
+              "label": "medium",
+              "grams": 250
+            }
+          },
+          {
+            "id": 5,
+            "name": "Tomatoes",
+            "amount": 150,
+            "unit": "g",
+            "piece": {
+              "label": "medium",
+              "grams": 123
+            }
+          },
+          {
+            "id": 6,
+            "name": "Olive oil",
+            "amount": 5,
+            "unit": "ml"
+          },
+          {
+            "id": 7,
+            "name": "Dried oregano",
+            "amount": 1,
+            "unit": "g"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Topping",
+        "ingredients": [
+          {
+            "id": 8,
+            "name": "Cottage cheese",
+            "amount": 60,
+            "unit": "g"
+          },
+          {
+            "id": 9,
+            "name": "Honey",
+            "amount": 10,
+            "unit": "g"
+          },
+          {
+            "id": 10,
+            "name": "Chili flakes",
+            "amount": 1,
+            "unit": "g"
+          },
+          {
+            "id": 11,
+            "name": "Halloumi",
+            "amount": 50,
+            "unit": "g",
+            "variant": "Halloumi"
+          },
+          {
+            "id": 12,
+            "name": "Eggs",
+            "amount": 2,
+            "unit": "pcs",
+            "piece": {
+              "label": "egg",
+              "grams": 50
+            },
+            "variant": "Egg"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Rinse the lentils, put them in a saucepan, cover with water, add salt, and cook covered for about 20–30 minutes until tender.",
+        "timerMinutes": 25
+      },
+      {
+        "id": 2,
+        "text": "Once the water has nearly evaporated, stir in the tomato paste and balsamic vinegar and simmer briefly. Season with salt and pepper to taste.",
+        "timerMinutes": null
+      },
+      {
+        "id": 3,
+        "text": "Roast the zucchini and tomatoes in a pan with the olive oil and dried oregano.",
+        "timerMinutes": 10
+      },
+      {
+        "id": 4,
+        "text": "Slice the halloumi and pan-fry it dry (no oil) until golden on both sides.",
+        "timerMinutes": null,
+        "variant": "Halloumi"
+      },
+      {
+        "id": 5,
+        "text": "Fry or boil the eggs to your preference.",
+        "timerMinutes": null,
+        "variant": "Egg"
+      },
+      {
+        "id": 6,
+        "text": "Serve the lentils with the roasted vegetables and the cottage cheese, sweetened with honey and topped with chili flakes or freshly ground pepper, alongside the halloumi or egg.",
+        "timerMinutes": null
+      }
+    ]
   }
 ]
