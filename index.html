@@ -225,7 +225,8 @@ function DetailView({recipe,onBack}){
               E("div",{style:{fontSize:22,fontWeight:700,color,lineHeight:1}},Math.round(nutrition[key])),
               E("div",{style:{fontSize:11,color:MUT2,marginTop:3}},unit));
           })
-        )
+        ),
+        recipe.nutritionNote&&E("p",{style:{fontSize:11,color:MUT2,marginTop:12,lineHeight:1.5}},recipe.nutritionNote)
       ),
 recipe.sources?E("div",{style:{textAlign:"center",fontSize:11,color:MUT2,marginBottom:20}},
         recipe.sources.map((s,i)=>E("p",{key:i,style:{margin:"2px 0"}},
