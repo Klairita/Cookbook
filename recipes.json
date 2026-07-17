@@ -1161,5 +1161,116 @@
         "timerMinutes": null
       }
     ]
+  },
+  {
+    "id": 13,
+    "name": "Creamy Garlic Chicken and Potatoes",
+    "category": "Comfort Food",
+    "description": "One-pan chicken and potatoes in a creamy garlic-paprika sauce with parmesan and fresh parsley",
+    "baseServings": 4,
+    "prepTime": 15,
+    "cookTime": 30,
+    "tags": [
+      "Comfort Food",
+      "Chicken",
+      "Creamy",
+      "Garlic",
+      "Dinner",
+      "Lunch",
+      "New"
+    ],
+    "photo": null,
+    "nutrition": {
+      "calories": 410,
+      "protein": 38,
+      "carbs": 21,
+      "fat": 17
+    },
+    "source": "https://www.facebook.com/share/r/19EH7W5ovN/",
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Potatoes",
+            "amount": 400,
+            "unit": "g",
+            "piece": {
+              "label": "medium",
+              "grams": 170
+            }
+          },
+          {
+            "id": 2,
+            "name": "Chicken breast",
+            "amount": 400,
+            "unit": "g",
+            "piece": {
+              "label": "breast",
+              "grams": 150
+            }
+          },
+          {
+            "id": 3,
+            "name": "Rapeseed oil",
+            "amount": 15,
+            "unit": "ml"
+          },
+          {
+            "id": 4,
+            "name": "Garlic cloves",
+            "amount": 3,
+            "unit": "pcs"
+          },
+          {
+            "id": 5,
+            "name": "Cream",
+            "amount": 250,
+            "unit": "ml"
+          },
+          {
+            "id": 6,
+            "name": "Parmesan",
+            "amount": 30,
+            "unit": "g"
+          },
+          {
+            "id": 7,
+            "name": "Fresh parsley",
+            "amount": 5,
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Peel and dice the potatoes. Cut the chicken breast into bite-sized cubes.",
+        "timerMinutes": null
+      },
+      {
+        "id": 2,
+        "text": "Heat the rapeseed oil in a large pan and fry the potatoes and chicken together, seasoning with salt, sweet paprika, dried parsley and crushed cumin to taste, until the chicken is cooked through and the potatoes are tender.",
+        "timerMinutes": 20
+      },
+      {
+        "id": 3,
+        "text": "Add the minced garlic and cook until fragrant.",
+        "timerMinutes": 2
+      },
+      {
+        "id": 4,
+        "text": "Pour in the cream, stir everything together and let it simmer for a few minutes.",
+        "timerMinutes": 5
+      },
+      {
+        "id": 5,
+        "text": "Stir in the parmesan and fresh parsley just before serving.",
+        "timerMinutes": null
+      }
+    ]
   }
 ]
