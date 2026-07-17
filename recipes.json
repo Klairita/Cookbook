@@ -952,5 +952,111 @@
         "timerMinutes": null
       }
     ]
+  },
+  {
+    "id": 11,
+    "name": "Puff Pastry Hot Dogs with Ketchup & Mustard",
+    "category": "Snack",
+    "description": "A sheet of puff pastry topped with hot dogs, ketchup and mustard, egg-washed and baked until golden — ready in under 30 minutes",
+    "baseServings": 6,
+    "prepTime": 10,
+    "cookTime": 20,
+    "tags": [
+      "Snack",
+      "Quick",
+      "Kid-Friendly"
+    ],
+    "photo": null,
+    "nutrition": {
+      "calories": 330,
+      "protein": 10,
+      "carbs": 22,
+      "fat": 23
+    },
+    "source": "https://www.facebook.com/share/r/1DXRionzSA/",
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Puff pastry sheet",
+            "amount": 1,
+            "unit": "pcs",
+            "piece": {
+              "label": "sheet",
+              "grams": 275
+            }
+          },
+          {
+            "id": 2,
+            "name": "Hot dogs (sausages)",
+            "amount": 6,
+            "unit": "pcs",
+            "piece": {
+              "label": "sausage",
+              "grams": 50
+            }
+          },
+          {
+            "id": 3,
+            "name": "Ketchup",
+            "amount": 30,
+            "unit": "g"
+          },
+          {
+            "id": 4,
+            "name": "Mustard",
+            "amount": 20,
+            "unit": "g"
+          },
+          {
+            "id": 5,
+            "name": "Egg (for egg wash)",
+            "amount": 1,
+            "unit": "pcs"
+          },
+          {
+            "id": 6,
+            "name": "Sesame seeds",
+            "amount": 5,
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Roll out the puff pastry sheet on a lined baking tray.",
+        "timerMinutes": null
+      },
+      {
+        "id": 2,
+        "text": "Arrange the hot dogs in rows on top of the pastry.",
+        "timerMinutes": null
+      },
+      {
+        "id": 3,
+        "text": "Squeeze ketchup and mustard over the hot dogs.",
+        "timerMinutes": null
+      },
+      {
+        "id": 4,
+        "text": "Brush the exposed pastry with beaten egg and sprinkle with sesame seeds, if using.",
+        "timerMinutes": null
+      },
+      {
+        "id": 5,
+        "text": "Bake at 180°C (350°F) for about 20 minutes, until the pastry is golden and puffed.",
+        "timerMinutes": 20
+      },
+      {
+        "id": 6,
+        "text": "Let cool slightly, then slice into pieces and serve.",
+        "timerMinutes": null
+      }
+    ]
   }
 ]
