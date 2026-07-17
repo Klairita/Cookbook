@@ -1,0 +1,717 @@
+[
+  {
+    "id": "chicken-breast",
+    "name": "Chicken breast",
+    "brand": null,
+    "per100": {
+      "calories": 165,
+      "protein": 31,
+      "carbs": 0,
+      "fat": 3.6
+    }
+  },
+  {
+    "id": "gnocchi-sweet-potato",
+    "name": "Gnocchi (sweet potato)",
+    "brand": null,
+    "per100": {
+      "calories": 150,
+      "protein": 3,
+      "carbs": 31,
+      "fat": 0.8
+    }
+  },
+  {
+    "id": "passata",
+    "name": "Passata",
+    "brand": null,
+    "per100": {
+      "calories": 32,
+      "protein": 1.6,
+      "carbs": 5.5,
+      "fat": 0.3
+    }
+  },
+  {
+    "id": "skyr",
+    "name": "Skyr",
+    "brand": null,
+    "per100": {
+      "calories": 63,
+      "protein": 11,
+      "carbs": 4,
+      "fat": 0.2
+    }
+  },
+  {
+    "id": "light-mozzarella",
+    "name": "Light mozzarella",
+    "brand": null,
+    "per100": {
+      "calories": 220,
+      "protein": 26,
+      "carbs": 2,
+      "fat": 12
+    }
+  },
+  {
+    "id": "sun-dried-tomatoes",
+    "name": "Sun-dried tomatoes",
+    "brand": null,
+    "per100": {
+      "calories": 110,
+      "protein": 2,
+      "carbs": 9,
+      "fat": 7
+    }
+  },
+  {
+    "id": "zucchini",
+    "name": "Zucchini",
+    "brand": null,
+    "per100": {
+      "calories": 17,
+      "protein": 1.2,
+      "carbs": 3.1,
+      "fat": 0.3
+    }
+  },
+  {
+    "id": "onion",
+    "name": "Onion",
+    "brand": null,
+    "per100": {
+      "calories": 40,
+      "protein": 1.1,
+      "carbs": 9.3,
+      "fat": 0.1
+    }
+  },
+  {
+    "id": "red-onion",
+    "name": "Red onion",
+    "brand": null,
+    "per100": {
+      "calories": 40,
+      "protein": 1.1,
+      "carbs": 9.3,
+      "fat": 0.1
+    }
+  },
+  {
+    "id": "olive-oil",
+    "name": "Olive oil",
+    "brand": null,
+    "per100": {
+      "calories": 884,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 100
+    }
+  },
+  {
+    "id": "rapeseed-oil",
+    "name": "Rapeseed oil",
+    "brand": null,
+    "per100": {
+      "calories": 884,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 100
+    }
+  },
+  {
+    "id": "butter",
+    "name": "Butter",
+    "brand": null,
+    "per100": {
+      "calories": 717,
+      "protein": 0.9,
+      "carbs": 0.1,
+      "fat": 81
+    }
+  },
+  {
+    "id": "garlic",
+    "name": "Garlic",
+    "brand": null,
+    "per100": {
+      "calories": 149,
+      "protein": 6.4,
+      "carbs": 33,
+      "fat": 0.5
+    }
+  },
+  {
+    "id": "orzo",
+    "name": "Orzo (dry)",
+    "brand": null,
+    "per100": {
+      "calories": 371,
+      "protein": 13,
+      "carbs": 75,
+      "fat": 1.5
+    }
+  },
+  {
+    "id": "chicken-broth",
+    "name": "Chicken broth",
+    "brand": null,
+    "per100": {
+      "calories": 5,
+      "protein": 0.8,
+      "carbs": 0.5,
+      "fat": 0.1
+    }
+  },
+  {
+    "id": "spinach",
+    "name": "Spinach",
+    "brand": null,
+    "per100": {
+      "calories": 23,
+      "protein": 2.9,
+      "carbs": 3.6,
+      "fat": 0.4
+    }
+  },
+  {
+    "id": "parmesan",
+    "name": "Parmesan",
+    "brand": null,
+    "per100": {
+      "calories": 392,
+      "protein": 35,
+      "carbs": 3.2,
+      "fat": 26
+    }
+  },
+  {
+    "id": "frozen-peas",
+    "name": "Frozen peas",
+    "brand": null,
+    "per100": {
+      "calories": 81,
+      "protein": 5.4,
+      "carbs": 14,
+      "fat": 0.4
+    }
+  },
+  {
+    "id": "cherry-tomatoes",
+    "name": "Cherry tomatoes",
+    "brand": null,
+    "per100": {
+      "calories": 18,
+      "protein": 0.9,
+      "carbs": 3.9,
+      "fat": 0.2
+    }
+  },
+  {
+    "id": "tomato",
+    "name": "Tomatoes",
+    "brand": null,
+    "per100": {
+      "calories": 18,
+      "protein": 0.9,
+      "carbs": 3.9,
+      "fat": 0.2
+    }
+  },
+  {
+    "id": "feta",
+    "name": "Feta",
+    "brand": null,
+    "per100": {
+      "calories": 264,
+      "protein": 14,
+      "carbs": 4,
+      "fat": 21
+    }
+  },
+  {
+    "id": "dry-couscous",
+    "name": "Couscous (dry)",
+    "brand": null,
+    "per100": {
+      "calories": 376,
+      "protein": 12.8,
+      "carbs": 77,
+      "fat": 0.6
+    }
+  },
+  {
+    "id": "cucumber",
+    "name": "Cucumber",
+    "brand": null,
+    "per100": {
+      "calories": 15,
+      "protein": 0.7,
+      "carbs": 3.6,
+      "fat": 0.1
+    }
+  },
+  {
+    "id": "bell-pepper",
+    "name": "Bell pepper",
+    "brand": null,
+    "per100": {
+      "calories": 31,
+      "protein": 1,
+      "carbs": 6,
+      "fat": 0.3
+    }
+  },
+  {
+    "id": "lime-juice",
+    "name": "Lime juice",
+    "brand": null,
+    "per100": {
+      "calories": 25,
+      "protein": 0.4,
+      "carbs": 8.4,
+      "fat": 0.2
+    }
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "brand": null,
+    "per100": {
+      "calories": 304,
+      "protein": 0.3,
+      "carbs": 82,
+      "fat": 0
+    }
+  },
+  {
+    "id": "dijon-mustard",
+    "name": "Dijon mustard",
+    "brand": null,
+    "per100": {
+      "calories": 70,
+      "protein": 4.4,
+      "carbs": 5,
+      "fat": 4
+    }
+  },
+  {
+    "id": "mustard",
+    "name": "Mustard",
+    "brand": null,
+    "per100": {
+      "calories": 66,
+      "protein": 4,
+      "carbs": 5,
+      "fat": 3.3
+    }
+  },
+  {
+    "id": "quinoa",
+    "name": "Quinoa (dry)",
+    "brand": null,
+    "per100": {
+      "calories": 368,
+      "protein": 14,
+      "carbs": 64,
+      "fat": 6
+    }
+  },
+  {
+    "id": "granny-smith-apple",
+    "name": "Granny Smith apple",
+    "brand": null,
+    "per100": {
+      "calories": 52,
+      "protein": 0.3,
+      "carbs": 14,
+      "fat": 0.2
+    }
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "brand": null,
+    "per100": {
+      "calories": 52,
+      "protein": 0.3,
+      "carbs": 14,
+      "fat": 0.2
+    }
+  },
+  {
+    "id": "unsweetened-soy-milk",
+    "name": "Unsweetened soy milk",
+    "brand": null,
+    "per100": {
+      "calories": 33,
+      "protein": 3.3,
+      "carbs": 0.5,
+      "fat": 1.8
+    }
+  },
+  {
+    "id": "protein-powder-chocolate",
+    "name": "Chocolate protein powder",
+    "brand": null,
+    "per100": {
+      "calories": 380,
+      "protein": 75,
+      "carbs": 8,
+      "fat": 5
+    }
+  },
+  {
+    "id": "greek-yogurt-low-fat",
+    "name": "Plain Greek yogurt (0-2%)",
+    "brand": null,
+    "per100": {
+      "calories": 59,
+      "protein": 10,
+      "carbs": 3.6,
+      "fat": 0.4
+    }
+  },
+  {
+    "id": "unsweetened-almond-milk",
+    "name": "Unsweetened almond milk",
+    "brand": null,
+    "per100": {
+      "calories": 13,
+      "protein": 0.4,
+      "carbs": 0.3,
+      "fat": 1.1
+    }
+  },
+  {
+    "id": "jasmine-rice-dry",
+    "name": "Jasmine rice (dry)",
+    "brand": null,
+    "per100": {
+      "calories": 365,
+      "protein": 7,
+      "carbs": 80,
+      "fat": 0.6
+    }
+  },
+  {
+    "id": "soy-sauce",
+    "name": "Soy sauce",
+    "brand": null,
+    "per100": {
+      "calories": 53,
+      "protein": 8,
+      "carbs": 4.9,
+      "fat": 0.1
+    }
+  },
+  {
+    "id": "tamari",
+    "name": "Tamari",
+    "brand": null,
+    "per100": {
+      "calories": 60,
+      "protein": 10.5,
+      "carbs": 5.6,
+      "fat": 0
+    }
+  },
+  {
+    "id": "tuna-in-water",
+    "name": "Tuna in water, drained",
+    "brand": null,
+    "per100": {
+      "calories": 116,
+      "protein": 26,
+      "carbs": 0,
+      "fat": 1
+    }
+  },
+  {
+    "id": "avocado",
+    "name": "Avocado",
+    "brand": null,
+    "per100": {
+      "calories": 160,
+      "protein": 2,
+      "carbs": 8.5,
+      "fat": 14.7
+    }
+  },
+  {
+    "id": "edamame",
+    "name": "Edamame, shelled",
+    "brand": null,
+    "per100": {
+      "calories": 121,
+      "protein": 11,
+      "carbs": 9,
+      "fat": 5
+    }
+  },
+  {
+    "id": "peanut-butter",
+    "name": "Peanut butter",
+    "brand": null,
+    "per100": {
+      "calories": 588,
+      "protein": 25,
+      "carbs": 20,
+      "fat": 50
+    }
+  },
+  {
+    "id": "sesame-seeds",
+    "name": "Sesame seeds",
+    "brand": null,
+    "per100": {
+      "calories": 573,
+      "protein": 17.7,
+      "carbs": 23.4,
+      "fat": 49.7
+    }
+  },
+  {
+    "id": "puff-pastry",
+    "name": "Puff pastry",
+    "brand": null,
+    "per100": {
+      "calories": 558,
+      "protein": 6,
+      "carbs": 45,
+      "fat": 39
+    }
+  },
+  {
+    "id": "hot-dog-sausage",
+    "name": "Hot dog sausage",
+    "brand": null,
+    "per100": {
+      "calories": 280,
+      "protein": 11,
+      "carbs": 3,
+      "fat": 25
+    }
+  },
+  {
+    "id": "ketchup",
+    "name": "Ketchup",
+    "brand": null,
+    "per100": {
+      "calories": 112,
+      "protein": 1.2,
+      "carbs": 27,
+      "fat": 0.2
+    }
+  },
+  {
+    "id": "egg",
+    "name": "Egg",
+    "brand": null,
+    "per100": {
+      "calories": 143,
+      "protein": 13,
+      "carbs": 1.1,
+      "fat": 9.5
+    }
+  },
+  {
+    "id": "pasta-dry",
+    "name": "Pasta (dry)",
+    "brand": null,
+    "per100": {
+      "calories": 371,
+      "protein": 13,
+      "carbs": 75,
+      "fat": 1.5
+    }
+  },
+  {
+    "id": "cottage-cheese",
+    "name": "Cottage cheese",
+    "brand": null,
+    "per100": {
+      "calories": 98,
+      "protein": 11,
+      "carbs": 3.4,
+      "fat": 4.3
+    }
+  },
+  {
+    "id": "pesto",
+    "name": "Pesto",
+    "brand": null,
+    "per100": {
+      "calories": 303,
+      "protein": 3.6,
+      "carbs": 4.2,
+      "fat": 31
+    }
+  },
+  {
+    "id": "potatoes",
+    "name": "Potatoes",
+    "brand": null,
+    "per100": {
+      "calories": 77,
+      "protein": 2,
+      "carbs": 17,
+      "fat": 0.1
+    }
+  },
+  {
+    "id": "cream",
+    "name": "Cream (cooking, ~30%)",
+    "brand": null,
+    "per100": {
+      "calories": 300,
+      "protein": 2.2,
+      "carbs": 3.5,
+      "fat": 30
+    }
+  },
+  {
+    "id": "grated-cheese",
+    "name": "Grated cheese",
+    "brand": null,
+    "per100": {
+      "calories": 380,
+      "protein": 25,
+      "carbs": 1.3,
+      "fat": 31
+    }
+  },
+  {
+    "id": "sour-cream",
+    "name": "Sour cream",
+    "brand": null,
+    "per100": {
+      "calories": 193,
+      "protein": 2.4,
+      "carbs": 4.6,
+      "fat": 19
+    }
+  },
+  {
+    "id": "whole-grain-tortilla",
+    "name": "Whole grain tortilla",
+    "brand": null,
+    "per100": {
+      "calories": 280,
+      "protein": 8,
+      "carbs": 45,
+      "fat": 7
+    }
+  },
+  {
+    "id": "balsamic-vinegar",
+    "name": "Balsamic vinegar",
+    "brand": null,
+    "per100": {
+      "calories": 88,
+      "protein": 0.5,
+      "carbs": 17,
+      "fat": 0
+    }
+  },
+  {
+    "id": "black-beluga-lentils",
+    "name": "Black beluga lentils (dry)",
+    "brand": null,
+    "per100": {
+      "calories": 353,
+      "protein": 26,
+      "carbs": 60,
+      "fat": 1.1
+    }
+  },
+  {
+    "id": "tomato-paste",
+    "name": "Tomato paste",
+    "brand": null,
+    "per100": {
+      "calories": 82,
+      "protein": 4.3,
+      "carbs": 18.9,
+      "fat": 0.5
+    }
+  },
+  {
+    "id": "halloumi",
+    "name": "Halloumi",
+    "brand": null,
+    "per100": {
+      "calories": 321,
+      "protein": 22,
+      "carbs": 2,
+      "fat": 25
+    }
+  },
+  {
+    "id": "oats",
+    "name": "Oats",
+    "brand": null,
+    "per100": {
+      "calories": 379,
+      "protein": 13.5,
+      "carbs": 67.7,
+      "fat": 6.5
+    }
+  },
+  {
+    "id": "magerquark",
+    "name": "Magerquark (low-fat quark)",
+    "brand": null,
+    "per100": {
+      "calories": 67,
+      "protein": 12,
+      "carbs": 4,
+      "fat": 0.2
+    }
+  },
+  {
+    "id": "chia-seeds",
+    "name": "Chia seeds",
+    "brand": null,
+    "per100": {
+      "calories": 486,
+      "protein": 17,
+      "carbs": 42,
+      "fat": 31
+    }
+  },
+  {
+    "id": "collagen-protein",
+    "name": "Collagen protein",
+    "brand": null,
+    "per100": {
+      "calories": 370,
+      "protein": 90,
+      "carbs": 0,
+      "fat": 0
+    }
+  },
+  {
+    "id": "almond-butter",
+    "name": "Almond butter",
+    "brand": null,
+    "per100": {
+      "calories": 614,
+      "protein": 21,
+      "carbs": 19,
+      "fat": 56
+    }
+  },
+  {
+    "id": "hazelnut-butter",
+    "name": "Hazelnut butter",
+    "brand": null,
+    "per100": {
+      "calories": 646,
+      "protein": 15,
+      "carbs": 17,
+      "fat": 61
+    }
+  }
+]
