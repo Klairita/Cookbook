@@ -1801,11 +1801,30 @@
       "Quick"
     ],
     "photo": null,
-    "nutrition": {
-      "calories": 430,
-      "protein": 47,
-      "carbs": 47,
-      "fat": 8
+    "variants": [
+      "Peanut Butter",
+      "Almond Butter",
+      "Hazelnut Butter"
+    ],
+    "nutritionByVariant": {
+      "Peanut Butter": {
+        "calories": 430,
+        "protein": 47,
+        "carbs": 47,
+        "fat": 8
+      },
+      "Almond Butter": {
+        "calories": 431,
+        "protein": 47,
+        "carbs": 47,
+        "fat": 8
+      },
+      "Hazelnut Butter": {
+        "calories": 433,
+        "protein": 47,
+        "carbs": 47,
+        "fat": 9
+      }
     },
     "source": null,
     "ingredientSections": [
@@ -1851,12 +1870,27 @@
           },
           {
             "id": 7,
-            "name": "Peanut, almond or hazelnut butter",
+            "name": "Peanut butter",
             "amount": 5,
-            "unit": "g"
+            "unit": "g",
+            "variant": "Peanut Butter"
           },
           {
             "id": 8,
+            "name": "Almond butter",
+            "amount": 5,
+            "unit": "g",
+            "variant": "Almond Butter"
+          },
+          {
+            "id": 9,
+            "name": "Hazelnut butter",
+            "amount": 5,
+            "unit": "g",
+            "variant": "Hazelnut Butter"
+          },
+          {
+            "id": 10,
             "name": "Fruit (apple or berries)",
             "amount": 80,
             "unit": "g"
