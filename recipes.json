@@ -446,7 +446,7 @@
     "id": 7,
     "name": "Honey Mustard Shredded Chicken Bowl",
     "category": "Meal Prep",
-    "description": "Slow-baked honey mustard pulled chicken with fluffy quinoa and vibrant mango salsa",
+    "description": "Slow-baked honey mustard pulled chicken with fluffy quinoa and vibrant apple salsa",
     "baseServings": 1,
     "prepTime": 15,
     "cookTime": 140,
@@ -520,16 +520,16 @@
       },
       {
         "id": 3,
-        "title": "Mango salsa",
+        "title": "Apple salsa",
         "ingredients": [
           {
             "id": 7,
-            "name": "Mango",
+            "name": "Granny Smith apple",
             "amount": 80,
             "unit": "g",
             "piece": {
               "label": "medium",
-              "grams": 300
+              "grams": 180
             }
           },
           {
@@ -600,12 +600,12 @@
       },
       {
         "id": 5,
-        "text": "Dice mango, cucumber, bell pepper and red onion into small pieces. Toss with olive oil, lime juice, chili flakes, salt and cilantro.",
+        "text": "Dice apple, cucumber, bell pepper and red onion into small pieces. Toss with olive oil, lime juice, chili flakes, salt and cilantro.",
         "timerMinutes": null
       },
       {
         "id": 6,
-        "text": "Serve shredded chicken over quinoa with mango salsa on the side.",
+        "text": "Serve shredded chicken over quinoa with apple salsa on the side.",
         "timerMinutes": null
       }
     ]
