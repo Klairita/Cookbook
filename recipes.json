@@ -1976,5 +1976,189 @@
         "timerMinutes": null
       }
     ]
+  },
+  {
+    "id": 18,
+    "name": "Turkey Chilli con Carne",
+    "category": "Meal Prep",
+    "description": "Hearty ground turkey chilli with kidney beans, corn and a touch of dark chocolate, served over basmati rice with cucumber — great for meal prep",
+    "baseServings": 2,
+    "prepTime": 15,
+    "cookTime": 35,
+    "tags": [
+      "Meal Prep",
+      "Dinner",
+      "High Protein",
+      "New"
+    ],
+    "photo": null,
+    "nutritionNote": "The original recipe (from a physical cookbook) lists 580 kcal, 35g protein, 73g carbs, 12g fat and 15g fiber per serving. Fiber isn't tracked by this app, and the computed total above may differ somewhat since it's based on this kitchen's own generic/real product data rather than the book's figures.",
+    "source": null,
+    "ingredientSections": [
+      {
+        "id": 1,
+        "title": "Rice",
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Basmati rice (dry)",
+            "amount": 100,
+            "unit": "g",
+            "foodId": "basmati-rice-dry"
+          },
+          {
+            "id": 2,
+            "name": "Olive oil",
+            "amount": 5,
+            "unit": "ml",
+            "foodId": "olive-oil",
+            "piece": {
+              "label": "tsp",
+              "grams": 5
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Chilli",
+        "ingredients": [
+          {
+            "id": 3,
+            "name": "Onion",
+            "amount": 50,
+            "unit": "g",
+            "foodId": "onion",
+            "piece": {
+              "label": "medium",
+              "grams": 110
+            }
+          },
+          {
+            "id": 4,
+            "name": "Garlic cloves",
+            "amount": 1,
+            "unit": "pcs",
+            "foodId": "garlic",
+            "piece": {
+              "label": "clove",
+              "grams": 5
+            }
+          },
+          {
+            "id": 5,
+            "name": "Ground turkey",
+            "amount": 150,
+            "unit": "g",
+            "foodId": "ground-turkey"
+          },
+          {
+            "id": 6,
+            "name": "Tomatoes",
+            "amount": 50,
+            "unit": "g",
+            "foodId": "tomato",
+            "piece": {
+              "label": "medium",
+              "grams": 123
+            }
+          },
+          {
+            "id": 7,
+            "name": "Red kidney beans (canned, drained)",
+            "amount": 250,
+            "unit": "g",
+            "foodId": "kidney-beans-canned"
+          },
+          {
+            "id": 8,
+            "name": "Corn (canned, drained)",
+            "amount": 150,
+            "unit": "g",
+            "foodId": "corn-canned"
+          },
+          {
+            "id": 9,
+            "name": "Tomato paste",
+            "amount": 100,
+            "unit": "g",
+            "foodId": "tomato-paste"
+          },
+          {
+            "id": 10,
+            "name": "Ground coriander",
+            "amount": 2,
+            "unit": "g",
+            "foodId": "ground-coriander",
+            "piece": {
+              "label": "tsp",
+              "grams": 2
+            }
+          },
+          {
+            "id": 11,
+            "name": "Cumin (ground)",
+            "amount": 1,
+            "unit": "g",
+            "foodId": "cumin",
+            "piece": {
+              "label": "tsp",
+              "grams": 2
+            }
+          },
+          {
+            "id": 12,
+            "name": "Fresh coriander or parsley",
+            "amount": 5,
+            "unit": "g"
+          },
+          {
+            "id": 13,
+            "name": "Dark chocolate (100%)",
+            "amount": 10,
+            "unit": "g",
+            "foodId": "dark-chocolate-100"
+          },
+          {
+            "id": 14,
+            "name": "Cucumber",
+            "amount": 150,
+            "unit": "g",
+            "foodId": "cucumber",
+            "piece": {
+              "label": "medium",
+              "grams": 300
+            }
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "text": "Rinse the rice and add it to plenty of boiling salted water. Simmer on low heat for 10–14 minutes until tender, then drain through a sieve.",
+        "timerMinutes": 12
+      },
+      {
+        "id": 2,
+        "text": "Heat the olive oil and sauté the onion. Add the garlic and chili flakes to taste, and let the aroma release. Add the ground turkey, season with salt and pepper, and sauté slowly.",
+        "timerMinutes": null
+      },
+      {
+        "id": 3,
+        "text": "Add the tomatoes, kidney beans, corn, tomato paste, ground coriander and cumin, and simmer the mixture for 30–35 minutes.",
+        "timerMinutes": 32
+      },
+      {
+        "id": 4,
+        "text": "Stir in the chopped fresh coriander (or parsley) and the dark chocolate.",
+        "timerMinutes": null
+      },
+      {
+        "id": 5,
+        "text": "Divide the rice, chilli mixture and sliced cucumber into containers.",
+        "timerMinutes": null
+      }
+    ]
   }
 ]
