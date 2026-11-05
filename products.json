@@ -790,5 +790,38 @@
       "carbs": 30,
       "fat": 45
     }
+  },
+  {
+    "id": "ground-beef",
+    "name": "Ground beef",
+    "brand": null,
+    "per100": {
+      "calories": 250,
+      "protein": 17,
+      "carbs": 0,
+      "fat": 20
+    }
+  },
+  {
+    "id": "ground-pork",
+    "name": "Ground pork",
+    "brand": null,
+    "per100": {
+      "calories": 263,
+      "protein": 17,
+      "carbs": 0,
+      "fat": 21
+    }
+  },
+  {
+    "id": "ground-beef-pork-mix",
+    "name": "Ground beef/pork mixture",
+    "brand": null,
+    "per100": {
+      "calories": 257,
+      "protein": 17,
+      "carbs": 0,
+      "fat": 20.5
+    }
   }
 ]

@@ -1979,9 +1979,9 @@
   },
   {
     "id": 18,
-    "name": "Turkey Chilli con Carne",
+    "name": "Chilli con Carne",
     "category": "Meal Prep",
-    "description": "Hearty ground turkey chilli with kidney beans, corn and a touch of dark chocolate, served over basmati rice with cucumber — great for meal prep",
+    "description": "Hearty chilli con carne with kidney beans, corn and a touch of dark chocolate, served over basmati rice with cucumber — choose your meat",
     "baseServings": 2,
     "prepTime": 15,
     "cookTime": 35,
@@ -1992,6 +1992,12 @@
       "New"
     ],
     "photo": null,
+    "variants": [
+      "Turkey",
+      "Beef",
+      "Pork",
+      "Beef/Pork Mixture"
+    ],
     "nutritionNote": "The original recipe (from a physical cookbook) lists 580 kcal, 35g protein, 73g carbs, 12g fat and 15g fiber per serving. Fiber isn't tracked by this app, and the computed total above may differ somewhat since it's based on this kitchen's own generic/real product data rather than the book's figures.",
     "source": null,
     "ingredientSections": [
@@ -2050,10 +2056,35 @@
             "name": "Ground turkey",
             "amount": 150,
             "unit": "g",
-            "foodId": "ground-turkey"
+            "foodId": "ground-turkey",
+            "variant": "Turkey"
           },
           {
             "id": 6,
+            "name": "Ground beef",
+            "amount": 150,
+            "unit": "g",
+            "foodId": "ground-beef",
+            "variant": "Beef"
+          },
+          {
+            "id": 7,
+            "name": "Ground pork",
+            "amount": 150,
+            "unit": "g",
+            "foodId": "ground-pork",
+            "variant": "Pork"
+          },
+          {
+            "id": 8,
+            "name": "Ground beef/pork mixture",
+            "amount": 150,
+            "unit": "g",
+            "foodId": "ground-beef-pork-mix",
+            "variant": "Beef/Pork Mixture"
+          },
+          {
+            "id": 9,
             "name": "Tomatoes",
             "amount": 50,
             "unit": "g",
@@ -2064,28 +2095,28 @@
             }
           },
           {
-            "id": 7,
+            "id": 10,
             "name": "Red kidney beans (canned, drained)",
             "amount": 250,
             "unit": "g",
             "foodId": "kidney-beans-canned"
           },
           {
-            "id": 8,
+            "id": 11,
             "name": "Corn (canned, drained)",
             "amount": 150,
             "unit": "g",
             "foodId": "corn-canned"
           },
           {
-            "id": 9,
+            "id": 12,
             "name": "Tomato paste",
             "amount": 100,
             "unit": "g",
             "foodId": "tomato-paste"
           },
           {
-            "id": 10,
+            "id": 13,
             "name": "Ground coriander",
             "amount": 2,
             "unit": "g",
@@ -2096,7 +2127,7 @@
             }
           },
           {
-            "id": 11,
+            "id": 14,
             "name": "Cumin (ground)",
             "amount": 1,
             "unit": "g",
@@ -2107,20 +2138,20 @@
             }
           },
           {
-            "id": 12,
+            "id": 15,
             "name": "Fresh coriander or parsley",
             "amount": 5,
             "unit": "g"
           },
           {
-            "id": 13,
+            "id": 16,
             "name": "Dark chocolate (100%)",
             "amount": 10,
             "unit": "g",
             "foodId": "dark-chocolate-100"
           },
           {
-            "id": 14,
+            "id": 17,
             "name": "Cucumber",
             "amount": 150,
             "unit": "g",
@@ -2141,7 +2172,7 @@
       },
       {
         "id": 2,
-        "text": "Heat the olive oil and sauté the onion. Add the garlic and chili flakes to taste, and let the aroma release. Add the ground turkey, season with salt and pepper, and sauté slowly.",
+        "text": "Heat the olive oil and sauté the onion. Add the garlic and chili flakes to taste, and let the aroma release. Add the ground meat, season with salt and pepper, and sauté slowly.",
         "timerMinutes": null
       },
       {
